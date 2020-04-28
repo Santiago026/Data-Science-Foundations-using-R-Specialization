@@ -1,0 +1,45 @@
+
+R version 3.6.3 (2020-02-29) -- "Holding the Windsock"
+Copyright (C) 2020 The R Foundation for Statistical Computing
+Platform: x86_64-w64-mingw32/x64 (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> str(apply)
+function (X, MARGIN, FUN, ...)  
+> ##x is an array
+> ##MARGIN is an integer vector indicating which margins should be “retained”
+> ##FUN is a function to be applied
+> ##… is for other arguments to be passed to FUN
+> x <- matrix(rnorm(200), 20, 10)
+> apply(x, 2, mean)
+ [1]  0.301968352 -0.272294301  0.061994488  0.097708295  0.107096186
+ [6]  0.377678327  0.376876487 -0.288916548  0.003313838  0.060227426
+> apply(x, 1, sum)
+ [1] -2.34210991 -3.70080399 -2.65810092 -0.09521588  1.40638871  1.93774788
+ [7] -0.62228649 -0.64940054  1.31028216 -0.38451248  0.93495391  2.00556572
+[13]  1.39433889  7.84068195  5.71313515  2.54535953  2.55063413  0.47098982
+[19] -1.12437345 -0.02022319
+> ##Average matrix in an array
+> a <- array(rnorm(2 * 2* 10), c(2, 2, 10))
+> apply(a, c(1, 2), mean)
+           [,1]        [,2]
+[1,] -0.1407078  0.31868787
+[2,] -0.1270357 -0.03649643
+> rowMeans(a, dims = 2)
+           [,1]        [,2]
+[1,] -0.1407078  0.31868787
+[2,] -0.1270357 -0.03649643
+> 

@@ -1,0 +1,109 @@
+
+R version 3.6.3 (2020-02-29) -- "Holding the Windsock"
+Copyright (C) 2020 The R Foundation for Statistical Computing
+Platform: x86_64-w64-mingw32/x64 (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> ##mapply is a multivariate apply of sorts which applies a function in parallel over a set of arguments
+> str(mapply)
+function (FUN, ..., MoreArgs = NULL, SIMPLIFY = TRUE, USE.NAMES = TRUE)  
+> ##FUN is a function to apply
+> ##...contains arguments to apply over
+> ##MoreArgs is a list of other arguments to FUN
+> ##SIMPLIFY indicates whether the result should be simplified
+> 
+> ##The following is tedious to type
+> list(rep(1, 4), rep(2, 3), rep(3, 2), rep(4, 1))
+[[1]]
+[1] 1 1 1 1
+
+[[2]]
+[1] 2 2 2
+
+[[3]]
+[1] 3 3
+
+[[4]]
+[1] 4
+
+> ##Instead we can do
+> mapply(rep, 1:4, 4:1)
+[[1]]
+[1] 1 1 1 1
+
+[[2]]
+[1] 2 2 2
+
+[[3]]
+[1] 3 3
+
+[[4]]
+[1] 4
+
+> ##Vectorizing a Function
+> noise <- function(n, mean, sd) {
++ rnorm(n, mean, sd)
++ }
+> noise(5, 1, 2)
+[1] 4.0193532 5.2883954 2.0087514 0.3697273 3.4084964
+> noise(1L5, 1:5, 2)
+Error: unexpected numeric constant in "noise(1L5"
+> noise(1:5, 1:5, 2)
+[1] -0.05467749  0.59085935  3.52737620  4.38326762  3.16685282
+> 
+> ##Instant Vectorization
+> mapply(noise, 1:5, 1:5, 2)
+[[1]]
+[1] 1.785924
+
+[[2]]
+[1] -1.478404  2.329904
+
+[[3]]
+[1]  1.60532799  4.34496275 -0.08292874
+
+[[4]]
+[1] 4.7143740 0.7687264 4.3987659 5.8879089
+
+[[5]]
+[1] 4.417721 3.465083 2.584751 8.047725 7.939980
+
+> ##Which is the same as
+> list(noise(1, 1, 2),noise(2, 2, 2),
++ noise(3, 3, 2), noise(4, 4, 2)
++ noise(5, 5, 2))
+Error: unexpected symbol in:
+"noise(3, 3, 2), noise(4, 4, 2)
+noise"
+> list(noise(1, 1, 2), noise(2, 2, 2),
++ noise(3, 3, 2), noise(4, 4, 2),
++ noise(5, 5, 2))
+[[1]]
+[1] -1.119413
+
+[[2]]
+[1] 2.487530 3.582404
+
+[[3]]
+[1] 2.397850 5.887363 1.940976
+
+[[4]]
+[1] 5.448318 5.052200 3.752002 4.657696
+
+[[5]]
+[1] 1.600775 5.228443 7.574605 5.293831 6.657762
+
+> 
