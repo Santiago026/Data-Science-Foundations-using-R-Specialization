@@ -167,8 +167,8 @@ Content-type:
 # Using handles
 ```R
 google = handle("http://google.com")
-pg1 = GET(handle = google, path = "/")
-pg2 = GET(handle = google, path = "search")
+pg1 = GET(handle=google,path="/")
+pg2 = GET(handle=google,path="search")
 ```
 # Notes and further resources
 - R Bloggers has a number of examples of web scraping: http://www.r-bloggers.com/?s=Web+Scraping
