@@ -47,3 +47,8 @@
 # Reading music (MP3) data
 - tuneR: http://cran.r-project.org/web/packages/tuneR/
 - seewave: http://rug.mnhn.fr/seewave/
+
+# Resources
+-https://rstudio-pubs-static.s3.amazonaws.com/16815_e9607bbe2eb140278f4146a2560d83e7.html
+## GIT Resources
+-[Working with Advanced Formatting](https://help.github.com/en/github/writing-on-github/working-with-advan
