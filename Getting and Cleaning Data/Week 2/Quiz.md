@@ -6,8 +6,6 @@ Register an application with the Github API here https://github.com/settings/app
 Access the API to get information on your instructors repositories (hint: this is the url you want "https://api.github.com/users/jtleek/repos"). Use this data to find the time that the datasharing repo was created. What time was it created? This tutorial may be useful (https://github.com/hadley/httr/blob/master/demo/oauth2-github.r). 
 You may also need to run the code in the base R package and not R studio. </br>
 
-Since many people had issues with this I wrote a blog post on how to do this question: [Github API using R](https://medium.com/@GalarnykMichael/accessing-data-from-github-api-using-r-3633fb62cb08#.s1wco0d5u)
-
 [![Github API using R](https://github.com/mGalarnyk/datasciencecoursera/blob/master/3_Getting_and_Cleaning_Data/data/githubAPIusingR.png)](https://www.youtube.com/watch?v=xCPWRP_WqYQ?sub_confirmation=1  "Github API using R")
 
 ```R
@@ -132,4 +130,5 @@ sum(d[, 4])
 
 # Resources
 - Specifically for this question: https://towardsdatascience.com/accessing-data-from-github-api-using-r-3633fb62cb08#.s1wco0d5u
+-  Blog provided courtesy of Michael Galarnyk[Github API using R](https://medium.com/@GalarnykMichael/accessing-data-from-github-api-using-r-3633fb62cb08#.s1wco0d5u)
 - **Video courtesy of Michael Galarnyk**
