@@ -130,5 +130,5 @@ sum(d[, 4])
 
 # Resources
 - Specifically for this question: https://towardsdatascience.com/accessing-data-from-github-api-using-r-3633fb62cb08#.s1wco0d5u
--  Blog provided courtesy of Michael Galarnyk[Github API using R](https://medium.com/@GalarnykMichael/accessing-data-from-github-api-using-r-3633fb62cb08#.s1wco0d5u)
+- Blog provided courtesy of Michael Galarnyk [Github API using R](https://medium.com/@GalarnykMichael/accessing-data-from-github-api-using-r-3633fb62cb08#.s1wco0d5u)
 - **Video courtesy of Michael Galarnyk**
