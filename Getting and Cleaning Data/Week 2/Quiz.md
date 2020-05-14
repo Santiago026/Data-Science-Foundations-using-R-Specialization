@@ -23,9 +23,9 @@ library(httr)
 oauth_endpoints("github")
 
 # Change based on your appname, key, and secret 
-myapp <- oauth_app(appname = "Youtube_Michael_Galarnyk",
-                   key = "8758a6bf9a146e1da0c1",
-                   secret = "b9504edde46b794414495bd9c33ea28cbfd87824")
+myapp <- oauth_app(appname = "Coursera Data Science Foundations Using R Specialization",
+                   key = "699447e88fbe5bffd1b3",
+                   secret = "669bd53548be6e101b295d006408615ec309a453")
 
 # Get OAuth credentials
 github_token <- oauth2.0_token(oauth_endpoints("github"), myapp)
@@ -129,3 +129,7 @@ sum(d[, 4])
 # Answer: 
 # 32426.7
 ```
+
+# Resources
+- Specifically for this question: https://towardsdatascience.com/accessing-data-from-github-api-using-r-3633fb62cb08#.s1wco0d5u
+- **Video courtesy of Michael Galarnyk**
