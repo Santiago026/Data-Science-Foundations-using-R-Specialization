@@ -9,8 +9,8 @@
 - gzfile: open a connection to a .gz file
 - bzfile: open a connection to a .bz2 file
 - read.fwf hint-hint-wink-wink: Reads from a fixed-width file
-- ?connections for more information
-- Remember to close connections
+- *?connections* for more information
+- **Remember to close connections**
 
 # Foreign package
 - Loads data from Minitab, S, SAS, SPSS, Stata, Systat
