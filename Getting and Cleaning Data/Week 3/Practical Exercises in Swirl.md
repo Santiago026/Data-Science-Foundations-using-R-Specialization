@@ -1456,11 +1456,7 @@ Error in select(ip_id, package, size) : object 'ip_id' not found
 
 ...
 
-
-  |                                                                           
-
-
-
+  |===================================================================== |  100%
 ```
 # Resources
 - Here is a [link](https://jlinvegas.wordpress.com/2019/02/11/getting-and-cleaning-data-week-3-swirl-1-manipulating-data-with-dplyr/)
