@@ -1460,3 +1460,1262 @@ Error in select(ip_id, package, size) : object 'ip_id' not found
 ```
 # Resources
 - Here is a [link](https://jlinvegas.wordpress.com/2019/02/11/getting-and-cleaning-data-week-3-swirl-1-manipulating-data-with-dplyr/)
+
+# Practice Programming Assignment: swirl Lesson 2: Grouping and Chaining with dplyr
+```R
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> install.packages("swirl")
+Installing package into ‘D:/Documents/R/win-library/3.6’
+(as ‘lib’ is unspecified)
+--- Please select a CRAN mirror for use in this session ---
+trying URL 'https://ftp.osuosl.org/pub/cran/bin/windows/contrib/3.6/swirl_2.4.5.zip'
+Content type 'application/zip' length 350269 bytes (342 KB)
+downloaded 342 KB
+
+package ‘swirl’ successfully unpacked and MD5 sums checked
+
+The downloaded binary packages are in
+        C:\Users\Chris Norgaard\AppData\Local\Temp\RtmpsN9BKK\downloaded_packages
+> library(swirl)
+
+| Hi! Type swirl() when you are ready to begin.
+
+> install_course("Getting and Cleaning Data")
+
+  |                                                                            
+  |                                                                      |   0%
+  |                                                                            
+  |                                                                      |   1%
+  |                                                                            
+  |=                                                                     |   1%
+  |                                                                            
+  |=                                                                     |   2%
+  |                                                                            
+  |==                                                                    |   2%
+  |                                                                            
+  |==                                                                    |   3%
+  |                                                                            
+  |==                                                                    |   4%
+  |                                                                            
+  |===                                                                   |   4%
+  |                                                                            
+  |===                                                                   |   5%
+  |                                                                            
+  |====                                                                  |   5%
+  |                                                                            
+  |====                                                                  |   6%
+  |                                                                            
+  |=====                                                                 |   6%
+  |                                                                            
+  |=====                                                                 |   7%
+  |                                                                            
+  |=====                                                                 |   8%
+  |                                                                            
+  |======                                                                |   8%
+  |                                                                            
+  |======                                                                |   9%
+  |                                                                            
+  |=======                                                               |   9%
+  |                                                                            
+  |=======                                                               |  10%
+  |                                                                            
+  |=======                                                               |  11%
+  |                                                                            
+  |========                                                              |  11%
+  |                                                                            
+  |========                                                              |  12%
+  |                                                                            
+  |=========                                                             |  12%
+  |                                                                            
+  |=========                                                             |  13%
+  |                                                                            
+  |=========                                                             |  14%
+  |                                                                            
+  |==========                                                            |  14%
+  |                                                                            
+  |==========                                                            |  15%
+  |                                                                            
+  |===========                                                           |  15%
+  |                                                                            
+  |===========                                                           |  16%
+  |                                                                            
+  |============                                                          |  16%
+  |                                                                            
+  |============                                                          |  17%
+  |                                                                            
+  |============                                                          |  18%
+  |                                                                            
+  |=============                                                         |  18%
+  |                                                                            
+  |=============                                                         |  19%
+  |                                                                            
+  |==============                                                        |  19%
+  |                                                                            
+  |==============                                                        |  20%
+  |                                                                            
+  |==============                                                        |  21%
+  |                                                                            
+  |===============                                                       |  21%
+  |                                                                            
+  |===============                                                       |  22%
+  |                                                                            
+  |================                                                      |  22%
+  |                                                                            
+  |================                                                      |  23%
+  |                                                                            
+  |================                                                      |  24%
+  |                                                                            
+  |=================                                                     |  24%
+  |                                                                            
+  |=================                                                     |  25%
+  |                                                                            
+  |==================                                                    |  25%
+  |                                                                            
+  |==================                                                    |  26%
+  |                                                                            
+  |===================                                                   |  26%
+  |                                                                            
+  |===================                                                   |  27%
+  |                                                                            
+  |===================                                                   |  28%
+  |                                                                            
+  |====================                                                  |  28%
+  |                                                                            
+  |====================                                                  |  29%
+  |                                                                            
+  |=====================                                                 |  29%
+  |                                                                            
+  |=====================                                                 |  30%
+  |                                                                            
+  |=====================                                                 |  31%
+  |                                                                            
+  |======================                                                |  31%
+  |                                                                            
+  |======================                                                |  32%
+  |                                                                            
+  |=======================                                               |  32%
+  |                                                                            
+  |=======================                                               |  33%
+  |                                                                            
+  |=======================                                               |  34%
+  |                                                                            
+  |========================                                              |  34%
+  |                                                                            
+  |========================                                              |  35%
+  |                                                                            
+  |=========================                                             |  35%
+  |                                                                            
+  |=========================                                             |  36%
+  |                                                                            
+  |==========================                                            |  36%
+  |                                                                            
+  |==========================                                            |  37%
+  |                                                                            
+  |==========================                                            |  38%
+  |                                                                            
+  |===========================                                           |  38%
+  |                                                                            
+  |===========================                                           |  39%
+  |                                                                            
+  |============================                                          |  39%
+  |                                                                            
+  |============================                                          |  40%
+  |                                                                            
+  |============================                                          |  41%
+  |                                                                            
+  |=============================                                         |  41%
+  |                                                                            
+  |=============================                                         |  42%
+  |                                                                            
+  |==============================                                        |  42%
+  |                                                                            
+  |==============================                                        |  43%
+  |                                                                            
+  |==============================                                        |  44%
+  |                                                                            
+  |===============================                                       |  44%
+  |                                                                            
+  |===============================                                       |  45%
+  |                                                                            
+  |================================                                      |  45%
+  |                                                                            
+  |================================                                      |  46%
+  |                                                                            
+  |=================================                                     |  46%
+  |                                                                            
+  |=================================                                     |  47%
+  |                                                                            
+  |=================================                                     |  48%
+  |                                                                            
+  |==================================                                    |  48%
+  |                                                                            
+  |==================================                                    |  49%
+  |                                                                            
+  |===================================                                   |  49%
+  |                                                                            
+  |===================================                                   |  50%
+  |                                                                            
+  |===================================                                   |  51%
+  |                                                                            
+  |====================================                                  |  51%
+  |                                                                            
+  |====================================                                  |  52%
+  |                                                                            
+  |=====================================                                 |  52%
+  |                                                                            
+  |=====================================                                 |  53%
+  |                                                                            
+  |=====================================                                 |  54%
+  |                                                                            
+  |======================================                                |  54%
+  |                                                                            
+  |======================================                                |  55%
+  |                                                                            
+  |=======================================                               |  55%
+  |                                                                            
+  |=======================================                               |  56%
+  |                                                                            
+  |========================================                              |  56%
+  |                                                                            
+  |========================================                              |  57%
+  |                                                                            
+  |========================================                              |  58%
+  |                                                                            
+  |=========================================                             |  58%
+  |                                                                            
+  |=========================================                             |  59%
+  |                                                                            
+  |==========================================                            |  59%
+  |                                                                            
+  |==========================================                            |  60%
+  |                                                                            
+  |==========================================                            |  61%
+  |                                                                            
+  |===========================================                           |  61%
+  |                                                                            
+  |===========================================                           |  62%
+  |                                                                            
+  |============================================                          |  62%
+  |                                                                            
+  |============================================                          |  63%
+  |                                                                            
+  |=============================================                         |  64%
+  |                                                                            
+  |=============================================                         |  65%
+  |                                                                            
+  |==============================================                        |  65%
+  |                                                                            
+  |==============================================                        |  66%
+  |                                                                            
+  |===============================================                       |  66%
+  |                                                                            
+  |===============================================                       |  67%
+  |                                                                            
+  |===============================================                       |  68%
+  |                                                                            
+  |================================================                      |  68%
+  |                                                                            
+  |================================================                      |  69%
+  |                                                                            
+  |=================================================                     |  69%
+  |                                                                            
+  |=================================================                     |  70%
+  |                                                                            
+  |=================================================                     |  71%
+  |                                                                            
+  |==================================================                    |  71%
+  |                                                                            
+  |==================================================                    |  72%
+  |                                                                            
+  |===================================================                   |  72%
+  |                                                                            
+  |===================================================                   |  73%
+  |                                                                            
+  |===================================================                   |  74%
+  |                                                                            
+  |====================================================                  |  74%
+  |                                                                            
+  |====================================================                  |  75%
+  |                                                                            
+  |=====================================================                 |  75%
+  |                                                                            
+  |=====================================================                 |  76%
+  |                                                                            
+  |======================================================                |  76%
+  |                                                                            
+  |======================================================                |  77%
+  |                                                                            
+  |======================================================                |  78%
+  |                                                                            
+  |=======================================================               |  78%
+  |                                                                            
+  |=======================================================               |  79%
+  |                                                                            
+  |========================================================              |  79%
+  |                                                                            
+  |========================================================              |  80%
+  |                                                                            
+  |========================================================              |  81%
+  |                                                                            
+  |=========================================================             |  81%
+  |                                                                            
+  |=========================================================             |  82%
+  |                                                                            
+  |==========================================================            |  82%
+  |                                                                            
+  |==========================================================            |  83%
+  |                                                                            
+  |==========================================================            |  84%
+  |                                                                            
+  |===========================================================           |  84%
+  |                                                                            
+  |===========================================================           |  85%
+  |                                                                            
+  |============================================================          |  85%
+  |                                                                            
+  |============================================================          |  86%
+  |                                                                            
+  |=============================================================         |  86%
+  |                                                                            
+  |=============================================================         |  87%
+  |                                                                            
+  |=============================================================         |  88%
+  |                                                                            
+  |==============================================================        |  88%
+  |                                                                            
+  |==============================================================        |  89%
+  |                                                                            
+  |===============================================================       |  89%
+  |                                                                            
+  |===============================================================       |  90%
+  |                                                                            
+  |===============================================================       |  91%
+  |                                                                            
+  |================================================================      |  91%
+  |                                                                            
+  |================================================================      |  92%
+  |                                                                            
+  |=================================================================     |  92%
+  |                                                                            
+  |=================================================================     |  93%
+  |                                                                            
+  |=================================================================     |  94%
+  |                                                                            
+  |==================================================================    |  94%
+  |                                                                            
+  |==================================================================    |  95%
+  |                                                                            
+  |===================================================================   |  95%
+  |                                                                            
+  |===================================================================   |  96%
+  |                                                                            
+  |====================================================================  |  96%
+  |                                                                            
+  |====================================================================  |  97%
+  |                                                                            
+  |====================================================================  |  98%
+  |                                                                            
+  |===================================================================== |  98%
+  |                                                                            
+  |===================================================================== |  99%
+  |                                                                            
+  |======================================================================|  99%
+  |                                                                            
+  |======================================================================| 100%
+
+| Course installed successfully!
+
+> swirl()
+| Package ‘dplyr’ loaded correctly!
+
+
+  |                                                                            
+  |                                                                      |   0%
+
+| Warning: This lesson makes use of the View() function. View() may not work
+| properly in every programming environment. We highly recommend the use of
+| RStudio for this lesson.
+
+...
+
+
+  |                                                                            
+  |=                                                                     |   2%
+| In the last lesson, you learned about the five main data manipulation 'verbs'
+| in dplyr: select(), filter(), arrange(), mutate(), and summarize(). The last
+| of these, summarize(), is most powerful when applied to grouped data.
+
+...
+
+
+  |                                                                            
+  |===                                                                   |   4%
+| The main idea behind grouping data is that you want to break up your dataset
+| into groups of rows based on the values of one or more variables. The
+| group_by() function is reponsible for doing this.
+
+...
+
+...
+
+
+  |                                                                            
+  |===                                                                   |   4%
+| The main idea behind grouping data is that you want to break up your dataset
+| into groups of rows based on the values of one or more variables. The
+| group_by() function is reponsible for doing this.
+
+...
+
+
+  |                                                                            
+  |====                                                                  |   6%
+| We'll continue where we left off with RStudio's CRAN download log from July
+| 8, 2014, which contains information on roughly 225,000 R package downloads
+| (http://cran-logs.rstudio.com/).
+
+...
+
+
+  |                                                                            
+  |=====                                                                 |   8%
+| As with the last lesson, the dplyr package was automatically installed (if
+| necessary) and loaded at the beginning of this lesson. Normally, this is
+| something you would have to do on your own. Just to build the habit, type
+| library(dplyr) now to load the package again.
+
+> library(dplyr)
+
+| You are really on a roll!
+
+
+  |                                                                            
+  |=======                                                               |  10%
+| I've made the dataset available to you in a data frame called mydf. Put it
+| in a 'data frame tbl' using the tbl_df() function and store the result in a
+| object called cran. If you're not sure what I'm talking about, you should
+| start with the previous lesson. Otherwise, practice makes perfect!
+
+> cran <- tbl_df(mydf)
+
+| Great job!
+
+
+  |                                                                            
+  |========                                                              |  12%
+| To avoid confusion and keep things running smoothly, let's remove the
+| original dataframe from your workspace with rm("mydf").
+
+> rm("mydf")
+
+| You got it right!
+
+
+  |                                                                            
+  |=========                                                             |  13%
+| Print cran to the console.
+
+> cran
+# A tibble: 225,468 x 11
+       X date  time    size r_version r_arch r_os  package version country
+   <int> <chr> <chr>  <int> <chr>     <chr>  <chr> <chr>   <chr>   <chr>  
+ 1     1 2014~ 00:5~ 8.06e4 3.1.0     x86_64 ming~ htmlto~ 0.2.4   US     
+ 2     2 2014~ 00:5~ 3.22e5 3.1.0     x86_64 ming~ tseries 0.10-32 US     
+ 3     3 2014~ 00:4~ 7.48e5 3.1.0     x86_64 linu~ party   1.0-15  US     
+ 4     4 2014~ 00:4~ 6.06e5 3.1.0     x86_64 linu~ Hmisc   3.14-4  US     
+ 5     5 2014~ 00:4~ 7.98e4 3.0.2     x86_64 linu~ digest  0.6.4   CA     
+ 6     6 2014~ 00:4~ 7.77e4 3.1.0     x86_64 linu~ random~ 4.6-7   US     
+ 7     7 2014~ 00:4~ 3.94e5 3.1.0     x86_64 linu~ plyr    1.8.1   US     
+ 8     8 2014~ 00:4~ 2.82e4 3.0.2     x86_64 linu~ whisker 0.3-2   US     
+ 9     9 2014~ 00:5~ 5.93e3 <NA>      <NA>   <NA>  Rcpp    0.10.4  CN     
+10    10 2014~ 00:1~ 2.21e6 3.0.2     x86_64 linu~ hfligh~ 0.1     US     
+# ... with 225,458 more rows, and 1 more variable: ip_id <int>
+
+| Keep working like that and you'll get there!
+
+
+  |                                                                            
+  |===========                                                           |  15%
+| Our first goal is to group the data by package name. Bring up the help file
+| for group_by().
+
+> ?group_by()
+starting httpd help server ... done
+
+| Not exactly. Give it another go. Or, type info() for more options.
+
+| Use ?group_by to bring up the documentation.
+
+> ?group_by
+
+| Keep up the great work!
+
+
+  |                                                                            
+  |============                                                          |  17%
+| Group cran by the package variable and store the result in a new object
+| called by_package.
+
+> skip()
+
+| Entering the following correct answer for you...
+
+> by_package <- group_by(cran, package)
+
+| You nailed it! Good job!
+
+
+  |                                                                            
+  |=============                                                         |  19%
+| Let's take a look at by_package. Print it to the console.
+
+> print("by_package")
+[1] "by_package"
+
+| Not quite, but you're learning! Try again. Or, type info() for more options.
+
+| Type by_package to view its contents.
+
+> by_package
+# A tibble: 225,468 x 11
+# Groups:   package [6,023]
+       X date  time    size r_version r_arch r_os  package version country
+   <int> <chr> <chr>  <int> <chr>     <chr>  <chr> <chr>   <chr>   <chr>  
+ 1     1 2014~ 00:5~ 8.06e4 3.1.0     x86_64 ming~ htmlto~ 0.2.4   US     
+ 2     2 2014~ 00:5~ 3.22e5 3.1.0     x86_64 ming~ tseries 0.10-32 US     
+ 3     3 2014~ 00:4~ 7.48e5 3.1.0     x86_64 linu~ party   1.0-15  US     
+ 4     4 2014~ 00:4~ 6.06e5 3.1.0     x86_64 linu~ Hmisc   3.14-4  US     
+ 5     5 2014~ 00:4~ 7.98e4 3.0.2     x86_64 linu~ digest  0.6.4   CA     
+ 6     6 2014~ 00:4~ 7.77e4 3.1.0     x86_64 linu~ random~ 4.6-7   US     
+ 7     7 2014~ 00:4~ 3.94e5 3.1.0     x86_64 linu~ plyr    1.8.1   US     
+ 8     8 2014~ 00:4~ 2.82e4 3.0.2     x86_64 linu~ whisker 0.3-2   US     
+ 9     9 2014~ 00:5~ 5.93e3 <NA>      <NA>   <NA>  Rcpp    0.10.4  CN     
+10    10 2014~ 00:1~ 2.21e6 3.0.2     x86_64 linu~ hfligh~ 0.1     US     
+# ... with 225,458 more rows, and 1 more variable: ip_id <int>
+
+| That's a job well done!
+
+
+  |                                                                            
+  |===============                                                       |  21%
+| At the top of the output above, you'll see 'Groups: package', which tells us
+| that this tbl has been grouped by the package variable. Everything else
+| looks the same, but now any operation we apply to the grouped data will take
+| place on a per package basis.
+
+...
+
+
+  |                                                                            
+  |================                                                      |  23%
+| Recall that when we applied mean(size) to the original tbl_df via
+| summarize(), it returned a single number -- the mean of all values in the
+| size column. We may care about what that number is, but wouldn't it be so
+| much more interesting to look at the mean download size for each unique
+| package?
+
+...
+
+
+  |                                                                            
+  |==================                                                    |  25%
+| That's exactly what you'll get if you use summarize() to apply mean(size) to
+| the grouped data in by_package. Give it a shot.
+
+> skip()
+
+| Entering the following correct answer for you...
+
+> summarize(by_package, mean(size))
+# A tibble: 6,023 x 2
+   package     `mean(size)`
+   <chr>              <dbl>
+ 1 A3                62195.
+ 2 abc             4826665 
+ 3 abcdeFBA         455980.
+ 4 ABCExtremes       22904.
+ 5 ABCoptim          17807.
+ 6 ABCp2             30473.
+ 7 abctools        2589394 
+ 8 abd              453631.
+ 9 abf2              35693.
+10 abind             32939.
+# ... with 6,013 more rows
+
+| That's a job well done!
+
+
+  |                                                                            
+  |===================                                                   |  27%
+| Instead of returning a single value, summarize() now returns the mean size
+| for EACH package in our dataset.
+
+...
+
+
+  |                                                                            
+  |====================                                                  |  29%
+| Let's take it a step further. I just opened an R script for you that
+| contains a partially constructed call to summarize(). Follow the
+| instructions in the script comments.
+| 
+| When you are ready to move on, save the script and type submit(), or type
+| reset() to reset the script to its original state.
+
+> submit()
+
+| Sourcing your script...
+
+Error : object '' not found
+
+| Nice try, but that's not exactly what I was hoping for. Try again.
+
+| Follow the directions in the script comments very carefully. If R gave you
+| an error above, try to understand what it is telling you. If you get stuck,
+| type reset() to start with a fresh script, then save the script and type
+| submit() when you are ready.
+
+> submit()
+
+| Sourcing your script...
+
+Error in source(e$script_temp_path, encoding = "UTF-8") : 
+  C:\Users\CHRISN~1\AppData\Local\Temp\RtmpsN9BKK/summarize1.R:20:31: unexpected ','
+19: pack_sum <- summarize(by_package, count = , unique = , countries = , avg_bytes = )
+20:                       count = ,
+                                  ^
+
+| You're close...I can feel it! Try it again.
+
+| Follow the directions in the script comments very carefully. If R gave you
+| an error above, try to understand what it is telling you. If you get stuck,
+| type reset() to start with a fresh script, then save the script and type
+| submit() when you are ready.
+
+> submit()
+
+| Sourcing your script...
+
+Error : object '' not found
+
+| Almost! Try again.
+
+| Follow the directions in the script comments very carefully. If R gave you
+| an error above, try to understand what it is telling you. If you get stuck,
+| type reset() to start with a fresh script, then save the script and type
+| submit() when you are ready.
+
+> reset()
+Error in UseMethod("do_rst") : 
+  no applicable method for 'do_rst' applied to an object of class "c('environment', 'default')"
+
+| Leaving swirl now. Type swirl() to resume.
+
+> swirl()
+
+| Welcome to swirl! Please sign in. If you've been here before, use the same
+| name as you did then. If you are new, call yourself something unique.
+
+What shall I call you? Chris
+
+| Would you like to continue with one of these lessons?
+
+1: Getting and Cleaning Data Grouping and Chaining with dplyr
+2: No. Let me start something new.
+
+Selection: 1
+
+| Attempting to load lesson dependencies...
+
+| Package ‘dplyr’ loaded correctly!
+
+
+
+| Let's take it a step further. I just opened an R script for you that
+| contains a partially constructed call to summarize(). Follow the
+| instructions in the script comments.
+| 
+| When you are ready to move on, save the script and type submit(), or type
+| reset() to reset the script to its original state.
+
+> submit()
+
+| Sourcing your script...
+
+Error in source(e$script_temp_path, encoding = "UTF-8") : 
+  C:\Users\CHRISN~1\AppData\Local\Temp\RtmpsN9BKK/summarize1.R:20:31: unexpected ','
+19: pack_sum <- summarize(by_package,count = n(), unique = n_distinct(ip_id), countries = n_distinct(country), avg_bytes = mean(size)) 
+20:                       count = ,
+                                  ^
+
+| Not quite! Try again.
+
+| Follow the directions in the script comments very carefully. If R gave you
+| an error above, try to understand what it is telling you. If you get stuck,
+| type reset() to start with a fresh script, then save the script and type
+| submit() when you are ready.
+
+> submit()
+
+| Sourcing your script...
+
+Error in source(e$script_temp_path, encoding = "UTF-8") : 
+  C:\Users\CHRISN~1\AppData\Local\Temp\RtmpsN9BKK/summarize1.R:20:31: unexpected ','
+19: pack_sum <- summarize(by_package, count = n(), unique = n_distinct(ip_id), countries = n_distinct(country), avg_bytes = mean(size)) 
+20:                       count = ,
+                                  ^
+
+| Nice try, but that's not exactly what I was hoping for. Try again.
+
+| Follow the directions in the script comments very carefully. If R gave you
+| an error above, try to understand what it is telling you. If you get stuck,
+| type reset() to start with a fresh script, then save the script and type
+| submit() when you are ready.
+
+> reset()
+Error in UseMethod("do_rst") : 
+  no applicable method for 'do_rst' applied to an object of class "c('environment', 'default')"
+
+| Leaving swirl now. Type swirl() to resume.
+
+> swirl()
+
+| Welcome to swirl! Please sign in. If you've been here before, use the same
+| name as you did then. If you are new, call yourself something unique.
+
+What shall I call you? Chris
+
+| Would you like to continue with one of these lessons?
+
+1: Getting and Cleaning Data Grouping and Chaining with dplyr
+2: No. Let me start something new.
+
+Selection: 1
+
+| Attempting to load lesson dependencies...
+
+| Package ‘dplyr’ loaded correctly!
+
+
+
+| Let's take it a step further. I just opened an R script for you that
+| contains a partially constructed call to summarize(). Follow the
+| instructions in the script comments.
+| 
+| When you are ready to move on, save the script and type submit(), or type
+| reset() to reset the script to its original state.
+
+> submit()
+
+| Sourcing your script...
+
+pack_sum <- summarize(by_package, count = n(), unique = n_distinct(ip_id), countries = n_distinct(country), avg_bytes = mean(size))
+
+| That's the answer I was looking for.
+
+  |                                                                            
+  |======================                                                |  31%
+| Print the resulting tbl, pack_sum, to the console to examine its contents.
+
+> pack_sum
+# A tibble: 6,023 x 5
+   package     count unique countries avg_bytes
+   <chr>       <int>  <int>     <int>     <dbl>
+ 1 A3             25     24        10    62195.
+ 2 abc            29     25        16  4826665 
+ 3 abcdeFBA       15     15         9   455980.
+ 4 ABCExtremes    18     17         9    22904.
+ 5 ABCoptim       16     15         9    17807.
+ 6 ABCp2          18     17        10    30473.
+ 7 abctools       19     19        11  2589394 
+ 8 abd            17     16        10   453631.
+ 9 abf2           13     13         9    35693.
+10 abind         396    365        50    32939.
+# ... with 6,013 more rows
+
+| All that hard work is paying off!
+
+
+  |                                                                            
+  |=======================                                               |  33%
+| The 'count' column, created with n(), contains the total number of rows
+| (i.e. downloads) for each package. The 'unique' column, created with
+| n_distinct(ip_id), gives the total number of unique downloads for each
+| package, as measured by the number of distinct ip_id's. The 'countries'
+| column, created with n_distinct(country), provides the number of countries
+| in which each package was downloaded. And finally, the 'avg_bytes' column,
+| created with mean(size), contains the mean download size (in bytes) for each
+| package.
+
+...
+
+
+  |                                                                            
+  |========================                                              |  35%
+| It's important that you understand how each column of pack_sum was created
+| and what it means. Now that we've summarized the data by individual
+| packages, let's play around with it some more to see what we can learn.
+
+...
+
+
+  |                                                                            
+  |==========================                                            |  37%
+| Naturally, we'd like to know which packages were most popular on the day
+| these data were collected (July 8, 2014). Let's start by isolating the top
+| 1% of packages, based on the total number of downloads as measured by the
+| 'count' column.
+
+...
+
+
+  |                                                                            
+  |===========================                                           |  38%
+| We need to know the value of 'count' that splits the data into the top 1%
+| and bottom 99% of packages based on total downloads. In statistics, this is
+| called the 0.99, or 99%, sample quantile. Use quantile(pack_sum$count, probs
+| = 0.99) to determine this number.
+
+> quantile(pack_sum$count, probs = 0.99)
+   99% 
+679.56 
+
+| Perseverance, that's the answer.
+
+
+  |                                                                            
+  |============================                                          |  40%
+| Now we can isolate only those packages which had more than 679 total
+| downloads. Use filter() to select all rows from pack_sum for which 'count'
+| is strictly greater (>) than 679. Store the result in a new object called
+| top_counts.
+
+> skip()
+
+| Entering the following correct answer for you...
+
+> top_counts <- filter(pack_sum, count > 679)
+
+| You are doing so well!
+
+
+  |                                                                            
+  |==============================                                        |  42%
+| Let's take a look at top_counts. Print it to the console.
+
+> top_counts
+# A tibble: 61 x 5
+   package    count unique countries avg_bytes
+   <chr>      <int>  <int>     <int>     <dbl>
+ 1 bitops      1549   1408        76    28715.
+ 2 car         1008    837        64  1229122.
+ 3 caTools      812    699        64   176589.
+ 4 colorspace  1683   1433        80   357411.
+ 5 data.table   680    564        59  1252721.
+ 6 DBI         2599    492        48   206933.
+ 7 devtools     769    560        55   212933.
+ 8 dichromat   1486   1257        74   134732.
+ 9 digest      2210   1894        83   120549.
+10 doSNOW       740     75        24     8364.
+# ... with 51 more rows
+
+| You nailed it! Good job!
+
+
+  |                                                                            
+  |===============================                                       |  44%
+| There are only 61 packages in our top 1%, so we'd like to see all of them.
+| Since dplyr only shows us the first 10 rows, we can use the View() function
+| to see more.
+
+...
+
+
+  |                                                                            
+  |================================                                      |  46%
+| View all 61 rows with View(top_counts). Note that the 'V' in View() is
+| capitalized.
+
+> View(top_counts)
+
+| Nice work!
+
+
+  |                                                                            
+  |==================================                                    |  48%
+| arrange() the rows of top_counts based on the 'count' column and assign the
+| result to a new object called top_counts_sorted. We want the packages with
+| the highest number of downloads at the top, which means we want 'count' to
+| be in descending order. If you need help, check out ?arrange and/or ?desc.
+
+> skip()
+
+| Entering the following correct answer for you...
+
+> top_counts_sorted <- arrange(top_counts, desc(count))
+
+| Great job!
+
+
+  |                                                                            
+  |===================================                                   |  50%
+| Now use View() again to see all 61 rows of top_counts_sorted.
+
+> View(top_counts_sorted)
+
+| That's the answer I was looking for.
+
+
+  |                                                                            
+  |====================================                                  |  52%
+| If we use total number of downloads as our metric for popularity, then the
+| above output shows us the most popular packages downloaded from the RStudio
+| CRAN mirror on July 8, 2014. Not surprisingly, ggplot2 leads the pack with
+| 4602 downloads, followed by Rcpp, plyr, rJava, ....
+
+...
+
+
+  |                                                                            
+  |======================================                                |  54%
+| ...And if you keep on going, you'll see swirl at number 43, with 820 total
+| downloads. Sweet!
+
+...
+
+
+  |                                                                            
+  |=======================================                               |  56%
+| Perhaps we're more interested in the number of *unique* downloads on this
+| particular day. In other words, if a package is downloaded ten times in one
+| day from the same computer, we may wish to count that as only one download.
+| That's what the 'unique' column will tell us.
+
+...
+
+
+  |                                                                            
+  |========================================                              |  58%
+| Like we did with 'count', let's find the 0.99, or 99%, quantile for the
+| 'unique' variable with quantile(pack_sum$unique, probs = 0.99).
+
+> quantile(pack_sum$unique, probs = 0.99)
+99% 
+465 
+
+| You're the best!
+
+
+  |                                                                            
+  |==========================================                            |  60%
+| Apply filter() to pack_sum to select all rows corresponding to values of
+| 'unique' that are strictly greater than 465. Assign the result to a object
+| called top_unique.
+
+> top_unique <- filter(pack_sum,unique > 465)
+
+| Perseverance, that's the answer.
+
+
+  |                                                                            
+  |===========================================                           |  62%
+| Let's View() our top contenders!
+
+> skip()
+
+| Entering the following correct answer for you...
+
+> View(top_unique)
+
+| All that hard work is paying off!
+
+
+  |                                                                            
+  |============================================                          |  63%
+| Now arrange() top_unique by the 'unique' column, in descending order, to
+| see which packages were downloaded from the greatest number of unique IP
+| addresses. Assign the result to top_unique_sorted.
+
+> top_counts_sorted <- arrange(top_counts, desc(unique))
+
+| That's not exactly what I'm looking for. Try again. Or, type info() for
+| more options.
+
+| arrange(top_unique, desc(unique)) will arrange the rows of top_unique
+| based on the values of the 'unique' variable, in descending order. Assign
+| the result to top_unique_sorted.
+
+> skip()
+
+| Entering the following correct answer for you...
+
+> top_unique_sorted <- arrange(top_unique, desc(unique))
+
+| You nailed it! Good job!
+
+
+  |                                                                            
+  |==============================================                        |  65%
+| View() the sorted data.
+
+> View(top_counts_sorted)
+
+| Not exactly. Give it another go. Or, type info() for more options.
+
+| View(top_unique_sorted) will display the sorted data.
+
+> View(top_unique_sorted)
+
+| You nailed it! Good job!
+
+
+  |                                                                            
+  |===============================================                       |  67%
+| Now Rcpp is in the lead, followed by stringr, digest, plyr, and ggplot2.
+| swirl moved up a few spaces to number 40, with 698 unique downloads. Nice!
+
+...
+
+
+  |                                                                            
+  |================================================                      |  69%
+| Our final metric of popularity is the number of distinct countries from which
+| each package was downloaded. We'll approach this one a little differently to
+| introduce you to a method called 'chaining' (or 'piping').
+
+...
+
+
+  |                                                                            
+  |==================================================                    |  71%
+| Chaining allows you to string together multiple function calls in a way that is
+| compact and readable, while still accomplishing the desired result. To make it
+| more concrete, let's compute our last popularity metric from scratch, starting
+| with our original data.
+
+...
+
+
+  |                                                                            
+  |===================================================                   |  73%
+| I've opened up a script that contains code similar to what you've seen so far.
+| Don't change anything. Just study it for a minute, make sure you understand
+| everything that's there, then submit() when you are ready to move on.
+
+> submit()
+
+| Sourcing your script...
+
+# A tibble: 46 x 5
+   package      count unique countries avg_bytes
+   <chr>        <int>  <int>     <int>     <dbl>
+ 1 Rcpp          3195   2044        84  2512100.
+ 2 digest        2210   1894        83   120549.
+ 3 stringr       2267   1948        82    65277.
+ 4 plyr          2908   1754        81   799123.
+ 5 ggplot2       4602   1680        81  2427716.
+ 6 colorspace    1683   1433        80   357411.
+ 7 RColorBrewer  1890   1584        79    22764.
+ 8 scales        1726   1408        77   126819.
+ 9 bitops        1549   1408        76    28715.
+10 reshape2      2032   1652        76   330128.
+# ... with 36 more rows
+
+| You are amazing!
+
+
+  |                                                                            
+  |====================================================                  |  75%
+| It's worth noting that we sorted primarily by country, but used avg_bytes (in
+| ascending order) as a tie breaker. This means that if two packages were
+| downloaded from the same number of countries, the package with a smaller average
+| download size received a higher ranking.
+
+...
+
+
+  |                                                                            
+  |======================================================                |  77%
+| We'd like to accomplish the same result as the last script, but avoid saving our
+| intermediate results. This requires embedding function calls within one another.
+
+...
+
+
+  |                                                                            
+  |=======================================================               |  79%
+| That's exactly what we've done in this script. The result is equivalent, but the
+| code is much less readable and some of the arguments are far away from the
+| function to which they belong. Again, just try to understand what is going on
+| here, then submit() when you are ready to see a better solution.
+
+> submit()
+
+| Sourcing your script...
+
+# A tibble: 46 x 5
+   package      count unique countries avg_bytes
+   <chr>        <int>  <int>     <int>     <dbl>
+ 1 Rcpp          3195   2044        84  2512100.
+ 2 digest        2210   1894        83   120549.
+ 3 stringr       2267   1948        82    65277.
+ 4 plyr          2908   1754        81   799123.
+ 5 ggplot2       4602   1680        81  2427716.
+ 6 colorspace    1683   1433        80   357411.
+ 7 RColorBrewer  1890   1584        79    22764.
+ 8 scales        1726   1408        77   126819.
+ 9 bitops        1549   1408        76    28715.
+10 reshape2      2032   1652        76   330128.
+# ... with 36 more rows
+
+| Keep working like that and you'll get there!
+
+
+  |                                                                            
+  |=========================================================             |  81%
+| In this script, we've used a special chaining operator, %>%, which was originally
+| introduced in the magrittr R package and has now become a key component of dplyr.
+| You can pull up the related documentation with ?chain. The benefit of %>% is that
+| it allows us to chain the function calls in a linear fashion. The code to the
+| right of %>% operates on the result from the code to the left of %>%.
+| 
+| Once again, just try to understand the code, then type submit() to continue.
+
+> submit()
+
+| Sourcing your script...
+
+# A tibble: 46 x 5
+   package      count unique countries avg_bytes
+   <chr>        <int>  <int>     <int>     <dbl>
+ 1 Rcpp          3195   2044        84  2512100.
+ 2 digest        2210   1894        83   120549.
+ 3 stringr       2267   1948        82    65277.
+ 4 plyr          2908   1754        81   799123.
+ 5 ggplot2       4602   1680        81  2427716.
+ 6 colorspace    1683   1433        80   357411.
+ 7 RColorBrewer  1890   1584        79    22764.
+ 8 scales        1726   1408        77   126819.
+ 9 bitops        1549   1408        76    28715.
+10 reshape2      2032   1652        76   330128.
+# ... with 36 more rows
+
+| That's correct!
+
+
+  |                                                                            
+  |==========================================================            |  83%
+| So, the results of the last three scripts are all identical. But, the third
+| script provides a convenient and concise alternative to the more traditional
+| method that we've taken previously, which involves saving results as we go along.
+
+...
+
+
+  |                                                                            
+  |===========================================================           |  85%
+| Once again, let's View() the full data, which has been stored in result3.
+
+> View()
+Error in as.data.frame(x) : argument "x" is missing, with no default
+> View(result3)
+
+| You are amazing!
+
+
+  |                                                                            
+  |=============================================================         |  87%
+| It looks like Rcpp is on top with downloads from 84 different countries, followed
+| by digest, stringr, plyr, and ggplot2. swirl jumped up the rankings again, this
+| time to 27th.
+
+...
+
+
+  |                                                                            
+  |==============================================================        |  88%
+| To help drive the point home, let's work through a few more examples of chaining.
+
+...
+
+
+  |                                                                            
+  |===============================================================       |  90%
+| Let's build a chain of dplyr commands one step at a time, starting with the
+| script I just opened for you.
+
+> skip()
+# A tibble: 225,468 x 4
+   ip_id country package         size
+   <int> <chr>   <chr>          <int>
+ 1     1 US      htmltools      80589
+ 2     2 US      tseries       321767
+ 3     3 US      party         748063
+ 4     3 US      Hmisc         606104
+ 5     4 CA      digest         79825
+ 6     3 US      randomForest   77681
+ 7     3 US      plyr          393754
+ 8     5 US      whisker        28216
+ 9     6 CN      Rcpp            5928
+10     7 US      hflights     2206029
+# ... with 225,458 more rows
+
+| I just sourced the following script, which demonstrates one possible solution.
+
+Press Enter when you are ready to continue...
+
+| That's a job well done!
+
+
+  |                                                                            
+  |=================================================================     |  92%
+| Let's add to the chain.
+
+> skip()
+
+| I just sourced the following script, which demonstrates one possible solution.
+
+Press Enter when you are ready to continue...
+
+| You are amazing!
+
+
+  |                                                                            
+  |==================================================================    |  94%
+| A little bit more now.
+
+> skip()
+
+| I just sourced the following script, which demonstrates one possible solution.
+
+Press Enter when you are ready to continue...
+
+| You are amazing!
+
+
+  |                                                                            
+  |===================================================================   |  96%
+| And finish it off.
+
+> skip()
+
+| I just sourced the following script, which demonstrates one possible solution.
+
+Press Enter when you are ready to continue...
+
+| You're the best!
+
+
+  |                                                                            
+  |===================================================================== |  98%
+| In this lesson, you learned about grouping and chaining using dplyr. You combined
+| some of the things you learned in the previous lesson with these more advanced
+| ideas to produce concise, readable, and highly effective code. Welcome to the
+| wonderful world of dplyr!
