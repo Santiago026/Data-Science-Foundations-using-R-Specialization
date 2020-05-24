@@ -1,5 +1,10 @@
 # Practice Programming Assignment: swirl Lesson 3: Tidying Data with tidyr
-## Resources
-- Documentation for package ‘lubridate’ version 1.7.8 [here](http://127.0.0.1:17574/library/lubridate/html/00Index.html)
+-  tidyr [here](https://www.rdocumentation.org/packages/tidyr/versions/0.8.3)
+## Concepts of tidyr functions
+- ``` gather() ``` 
+  - ?gather
+  - [here](http://127.0.0.1:15107/library/tidyr/html/gather.html)
 
--``` with_tz() ```
+- ``` separate() ```
+  - ?separate
+  - [here](http://127.0.0.1:15107/library/tidyr/html/separate.html)
