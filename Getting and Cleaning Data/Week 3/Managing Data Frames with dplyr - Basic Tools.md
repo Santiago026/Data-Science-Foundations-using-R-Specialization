@@ -237,6 +237,6 @@ month pm25 o3 no2
 -Once you learn the dplyr “grammar” there are a few additional
 benefits
 
--I dplyr can work with other data frame “backends”
--I data.table for large fast tables
--I SQL interface for relational databases via the DBI package
+- I dplyr can work with other data frame “backends”
+- I data.table for large fast tables
+- I SQL interface for relational databases via the DBI package
