@@ -2719,3 +2719,7 @@ Press Enter when you are ready to continue...
 | some of the things you learned in the previous lesson with these more advanced
 | ideas to produce concise, readable, and highly effective code. Welcome to the
 | wonderful world of dplyr!
+```
+
+# Practice Programming Assignment: swirl Lesson 3: Tidying Data with tidyr
+```R
