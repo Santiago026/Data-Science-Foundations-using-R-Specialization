@@ -1,4 +1,3 @@
-```R
 Sys.getlocale("LC_TIME")
 
 library(lubridate)
@@ -165,5 +164,4 @@ as.period(how_long)
 # | background when you began this lesson. Type stopwatch() to see how long
 # | you've been working!
 stopwatch()
-```
 
