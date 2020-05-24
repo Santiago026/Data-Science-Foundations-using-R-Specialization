@@ -1,177 +1,169 @@
 ```R
-library(tidyr)
+Sys.getlocale("LC_TIME")
 
-# First dataset
-students
+library(lubridate)
 
-?gather
-# gather
-gather(students,sex,count,-grade)
+help(package = lubridate)
 
-# It's important to understand what each argument to gather() means. The
-# data argument, students, gives the name of the original dataset. The
-# key and value arguments -- sex and count, respectively -- give the
-# column names for our tidy dataset. The final argument, -grade, says
-# that we want to gather all columns EXCEPT the grade column (since grade
-# is already a proper column variable.)
+# today
+this_day <- today()
+this_day
 
-# Second dataset
-students2
+# There are three components to this date. In order, they are year,
+#  month, and day. We can extract any of these components using the
+#  year(), month(), or day() function, respectively. Try any of those on
+#  this_day now.
+year(this_day)
 
-res <- gather(students2, sex_class, count, -grade)
-res
+# weekday
+wday(this_day)
+wday(this_day, label = TRUE)
 
-# separate
-?separate
+# datetime
+this_moment <- now()
+this_moment
 
-# separate column into 2
-separate(data = res, col = sex_class, into= c("sex", "class"))
+# we can also use hour(), minute(), and second()
+hour(this_moment)
 
-# script
-students2 %>%
-  gather(sex_class,count ,-grade ) %>%
-  separate(col=sex_class , c("sex", "class")) %>%
-  print
+# ymd(), dmy(), hms()
+ymd("1989-05-17")
 
-# Third dataset
-students3
+my_date <- ymd("1989-05-17")
+my_date
 
-# script
-students3 %>%
-  gather(class,grade, class1:class5, na.rm= TRUE) %>%
-  print
+class(my_date)
 
-# Spread a key-value pair across multiple columns
-?spread
+ymd("1989 May 17")
+mdy("March 12, 1975")
+dmy(25081985)
 
-students3 %>%
-  gather(class, grade, class1:class5, na.rm = TRUE) %>%
-  spread(test,grade) %>%
-  print
+ymd("1920/1/2")
 
+# object
+dt1
 
-# Extract values
-extract_numeric("class5")
+ymd_hms(dt1)
 
-# We want the values in the class columns to be
-# 1, 2, ..., 5 and not class1, class2, ..., class5.
-#
-# Use the mutate() function from dplyr along with
-# extract_numeric(). Hint: You can "overwrite" a column
-# with mutate() by assigning a new value to the existing
-# column instead of creating a new column.
-#
-# Check out ?mutate and/or ?extract_numeric if you need
-# a refresher.
-#
-students3 %>%
-  gather(class, grade, class1:class5, na.rm = TRUE) %>%
-  spread(test, grade) %>%
-  ### Call to mutate() goes here %>%
-  mutate(class=extract_numeric(class)) %>%
-  print
+hms("03:22:14")
 
-# Fourth dataset
-students4
+# datetime vector
+dt2
+ymd(dt2)
 
-# Complete the chained command below so that we are
-# selecting the id, name, and sex column from students4
-# and storing the result in student_info.
-#
-student_info <- students4 %>%
-  select(id,name ,sex ) %>%
-  print
+# The update() function allows us to update one or more components of a
+#  date-time. For example, let's say the current time is 08:34:55
+#  (hh:mm:ss). Update this_moment to the new time using the following
+#  command:
+ 
+update(this_moment, hours = 8, minutes = 34, seconds = 55)
 
-# Add a call to unique() below, which will remove
-# duplicate rows from student_info.
-#
-# Like with the call to the print() function below,
-# you can omit the parentheses after the function name.
-# This is a nice feature of %>% that applies when
-# there are no additional arguments to specify.
-#
-student_info <- students4 %>%
-  select(id, name, sex) %>%
-  ### Your code here %>%
-  unique() %>%
-  print
+this_moment
 
-# select() the id, class, midterm, and final columns
-# (in that order) and store the result in gradebook.
-#
-gradebook <- students4 %>%
-  select(id,class,midterm,final) %>%
-  print
+this_moment <- update(this_moment, hours = 10, minutes = 16, seconds = 0)
+
+this_moment
 
 
-# dataset
-passed
-failed
+# Now, pretend you are in New York City and you are planning to visit a
+#  friend in Hong Kong. You seem to have misplaced your itinerary, but you
+#  know that your flight departs New York at 17:34 (5:34pm) the day after
+#  tomorrow. You also know that your flight is scheduled to arrive in Hong
+#  Kong exactly 15 hours and 50 minutes after departure.
+
+# Let's reconstruct your itinerary from what you can remember, starting
+#  with the full date and time of your departure. We will approach this by
+#  finding the current date in New York, adding 2 full days, then setting
+#  the time to 17:34
+
+# To find the current date in New York, we'll use the now() function
+#  again. This time, however, we'll specify the time zone that we want:
+#  "America/New_York". Store the result in a variable called nyc. Check
+#  out ?now if you need help.
+nyc <- now("America/New_York")
+nyc
+
+# Your flight is the day after tomorrow (in New York time), so we want to
+#  add two days to nyc. One nice aspect of lubridate is that it allows you
+#  to use arithmetic operators on dates and times. In this case, we'd like
+#  to add two days to nyc, so we can use the following expression: nyc +
+#  days(2). Give it a try, storing the result in a variable called depart
+
+depart <- nyc + days(2)
+depart
+
+# So now depart contains the date of the day after tomorrow. Use update()
+#  to add the correct hours (17) and minutes (34) to depart. Reassign the
+#  result to depart.
+depart <- update(depart, hours=17, minutes = 34)
+depart
 
 
-# Use dplyr's mutate() to add a new column to the passed table. The
-#  column should be called status and the value, "passed" (a character
-#  string), should be the same for all students. 'Overwrite' the current
-#  version of passed with the new one.
+# The first step is to add 15 hours and 50 minutes to your departure
+#  time. Recall that nyc + days(2) added two days to the current time in
+#  New York. Use the same approach to add 15 hours and 50 minutes to the
+#  date-time stored in depart. Store the result in a new variable called
+# arrive
+arrive <- depart + hours(15) + minutes(50)
 
-passed <- mutate(passed, status="passed")
-failed <- mutate(failed, status="failed")
+# The with_tz() function returns a date-time as it would appear in
+#  another time zone. Use ?with_tz to check out the documentation.
+?with_tz
 
-# Now, pass as arguments the passed and failed tables (in order) to the
-#  dplyr function rbind_list() (for 'row bind'), which will join them
-#  together into a single unit. Check ?rbind_list if you need help.
+# Use with_tz() to convert arrive to the "Asia/Hong_Kong" time zone.
+#  Reassign the result to arrive, so that it will get the new value.
 
-rbind_list(passed, failed)
+arrive <- with_tz(arrive, "Asia/Hong_Kong")
+arrive
 
-# The SAT is a popular college-readiness exam in the United States that
-#  consists of three sections: critical reading, mathematics, and writing.
-#  Students can earn up to 800 points on each section. This dataset
-#  presents the total number of students, for each combination of exam
-#  section and sex, within each of six score ranges. It comes from the
-#  'Total Group Report 2013', which can be found here:
-#   
-#    http://research.collegeboard.org/programs/sat/data/cb-seniors-2013
+# Fast forward to your arrival in Hong Kong. You and your friend have
+#  just met at the airport and you realize that the last time you were
+# together was in Singapore on June 17, 2008. Naturally, you'd like to
+#  know exactly how long it has been.
 
-sat
+# Use the appropriate lubridate function to parse "June 17, 2008", just
+#  like you did near the beginning of this lesson. This time, however, you
+#  should specify an extra argument, tz = "Singapore". Store the result in
+#  a variable called last_time.
 
-# Accomplish the following three goals:
-#
-# 1. select() all columns that do NOT contain the word "total",
-# since if we have the male and female data, we can always
-# recreate the total count in a separate column, if we want it.
-# Hint: Use the contains() function, which you'll
-# find detailed in 'Selection' section of ?select.
-#
-# 2. gather() all columns EXCEPT score_range, using
-# key = part_sex and value = count.
-#
-# 3. separate() part_sex into two separate variables (columns),
-# called "part" and "sex", respectively. You may need to check
-# the 'Examples' section of ?separate to remember how the 'into'
-# argument should be phrased.
-#
-sat %>%
-  select(-contains("total")) %>%
-  gather(part_sex,count,-score_range) %>%
-  separate(col=part_sex, c("part","sex")) %>%
-  print
+last_time <- mdy("June 17, 2008",tz = "Singapore")
+last_time
 
-# Append two more function calls to accomplish the following:
-#
-# 1. Use group_by() (from dplyr) to group the data by part and
-# sex, in that order.
-#
-# 2. Use mutate to add two new columns, whose values will be
-# automatically computed group-by-group:
-#
-#   * total = sum(count)
-#   * prop = count / total
-#
-sat %>%
-  select(-contains("total")) %>%
-  gather(part_sex, count, -score_range) %>%
-  separate(part_sex, c("part", "sex")) %>%
-  group_by(part,sex) %>%
-  mutate(total = sum(count),prop = count / total) %>% 
-  print
+# Pull up the documentation for new_interval(), which we'll use to
+#  explore how much time has passed between arrive and last_time.
+?new_interval
+
+# Create a new_interval() that spans from last_time to arrive. Store it
+#  in a new variable called how_long.
+how_long <- new_interval(last_time, arrive)
+
+# use as.period(how_long) to see how long it's been
+as.period(how_long)
+
+# This is where things get a little tricky. Because of things like leap
+# | years, leap seconds, and daylight savings time, the length of any given
+# | minute, day, month, week, or year is relative to when it occurs. In
+# | contrast, the length of a second is always the same, regardless of when
+# | it occurs.
+# 
+# ...
+# 
+# |=============================================================== |  98%
+# 
+# | To address these complexities, the authors of lubridate introduce four
+# | classes of time related objects: instants, intervals, durations, and
+# | periods. These topics are beyond the scope of this lesson, but you can
+# | find a complete discussion in the 2011 Journal of Statistical Software
+# | paper titled 'Dates and Times Made Easy with lubridate'.
+# 
+# ...
+# 
+# |================================================================| 100%
+# 
+# | This concludes our introduction to working with dates and times in
+# | lubridate. I created a little timer that started running in the
+# | background when you began this lesson. Type stopwatch() to see how long
+# | you've been working!
+stopwatch()
 ```
+
