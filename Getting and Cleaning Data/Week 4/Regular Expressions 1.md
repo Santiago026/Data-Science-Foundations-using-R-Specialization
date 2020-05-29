@@ -1,3 +1,73 @@
+# Editing Text Variables
+### Concepts
+- ``` i think ```
+  - represent the beginning of a line
+  - example
+```i think we all rule for participating
+i think i have been outed
+i think this will be quite fun actually
+i think i need to go to work
+i think i first saw zombo in 1999.
+```
+
+- ``` morning$ ```
+  - ``` $ ``` represents the end of a line
+  - example:
+```
+well they had something this morning then had to catch a tram home in the morning
+dog obedience school in the morning
+and yes happy birthday i forgot to say it earlier this morning
+I walked in the rain this morning
+good morning
+```
+
+- ``` [Bb][Uu][Ss][Hh] ```
+  - letters listed in the brackets will match those listen in sentences
+  - example:
+```
+The democrats are playing, "Name the worst thing about Bush!" 
+I smelled the desert creosote bush, brownies, BBQ chicken
+BBQ and bushwalking at Molonglo Gorge
+Bush TOLD you that North Korea is part of the Axis of Evil
+I'm listening to Bush - Hurricane (Album Version)
+```
+
+- ``` ^[0-9][a-zA-Z] ```
+  - specify a range of letter [a-z] or [a-zA-Z]; notice that the order doesn't matter
+  - example:
+```
+7th inning stretch
+2nd half soon to begin. OSU did just win something
+3am - cant sleep - too hot still.. :(
+5ft 7 sent from heaven
+1st sign of starvagtion
+```
+
+- ``` ^[Ii] am ```
+  - example:
+```
+i am so angry at my boyfriend i can't even bear to 
+look at him
+
+i am boycotting the apple store
+
+I am twittering from iPhone
+
+I am a very vengeful person when you ruin my sweetheart.
+
+I am so over this. I need food. Mmm bacon...
+```
+
+- ``` [^?.]$ ```
+  - example:
+```
+i like basketballs
+6 and 9
+dont worry... we all die anyway!
+Not in Baghdad
+helicopter under water? hmmmm
+```
+
 # Regular Expressions
 - Regular expressions can be thought of as a combination of literals and metacharacters
 - To draw an analogy with natural language, think of literal text forming the words of this language, and the metacharacters defining its grammar
