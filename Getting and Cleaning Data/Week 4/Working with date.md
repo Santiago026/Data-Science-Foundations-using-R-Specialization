@@ -40,4 +40,5 @@
 ## Notes and further resources
 - More information in this nice lubridate tutorial [here](http://www.r-statistics.com/2012/03/do-more-with-dates-and-times-in-r-with-lubridate.html)
 - The lubridate vignette is the same content [here](http://cran.r.project.org/web/packages/libridate/vignettes/lubridate.html)
-- Ultimately you want your dates and times as class "Date" or the classes "POSIXct", "POSIXlt". For more information type ``` ?POSIXlt ```
+- Ultimately you want your dates and times as class "Date" or the classes "POSIXct", "POSIXlt". For more information type 
+``` ?POSIXlt ```
