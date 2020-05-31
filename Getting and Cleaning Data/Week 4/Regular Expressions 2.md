@@ -1,8 +1,8 @@
 # Regular Expressions 2
 ## Concepts
--``` . ```
+- ``` . ```
   - Used to refer to any character
--``` | ```
+- ``` | ```
   - Or; use it to combine two expressions
     - Subexpressions being called alternatives
 
