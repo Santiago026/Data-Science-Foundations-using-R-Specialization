@@ -19,7 +19,7 @@ NetBois: scanning ip 203.169.114.66
 Front Door 9:11:46 AM
 Sings: 011899988881999119725...3!
 ```
-## More MEtacharacters: | 
+## More Metacharacters: | 
 - This does not mean "pipe" in the context of regular expressions; instead it translates to "or"; we can use it to combine two expressions, the subexpressions being called alternatives
 ```R
 flood|fire
