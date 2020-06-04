@@ -1,0 +1,27 @@
+``` getwd() ```
+  - Find out what your current working directory is
+``` dir() ```
+  - List files in your working directory
+``` setwd() ```
+  - Set the location of your working directory
+
+
+# How to set your working directory
+- Use ``` getwd() ```
+- Your working directory is where R finds all of its files for reading and writing on you computer
+- Use Change dir to change your directory
+- ``` dir() ``` will give you a list of the files in you Working Directory
+-
+
+# How to edit our code files in Windows
+- You can load up the text editor by going to File, and say New Script
+- To load a function from your text editor to the R console you can:
+  - Copy and Paste
+    - ``` ls() ``` will list your functions
+  - Save as in your/a working directory
+    - use .R when saving
+    - type ``` dir() ``` to make sure it is in the directory
+    - Use ``` source() ``` to load the document and the code on it
+    - use ``` ls() ``` to list the functions loaded into the document
+    - You can load and save new text editor scripts to seperate code for different puposes
+    
