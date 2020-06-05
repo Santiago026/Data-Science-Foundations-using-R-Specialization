@@ -14,6 +14,7 @@
 
 
 ``` rug() ```
+  - 
 
 ``` summary() ```
   - 
@@ -21,5 +22,8 @@
 ``` abline() ```
   - This function adds one or more straight lines through the current plot
   - Add Straight Lines To A Plot
+  
+``` barchart() ```
+  - 
     
   - Markdown basic writing and formating [here](https://help.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax)
