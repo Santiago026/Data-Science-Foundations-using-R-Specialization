@@ -6,6 +6,7 @@
   
   
 ![image info](https://github.com/WelfareCheck/Data-Science-Foundations-using-R-Specialization/blob/master/Exploratory%20Data%20Analysis/Week%201/Lesson%201:%20Graphs/Boxplot.JPG?raw=true)
+![image info](https://github.com/WelfareCheck/Data-Science-Foundations-using-R-Specialization/blob/master/Exploratory%20Data%20Analysis/Week%201/Lesson%201:%20Graphs/Multi%20boxplots.JPG?raw=true)
 
 ### ``` hist() ```
   - [?hist()](https://www.rdocumentation.org/packages/graphics/versions/3.6.2/topics/hist)
@@ -14,6 +15,7 @@
   
 ![image info](https://github.com/WelfareCheck/Data-Science-Foundations-using-R-Specialization/blob/master/Exploratory%20Data%20Analysis/Week%201/Lesson%201:%20Graphs/Histogram.JPG?raw=true)
 ![image info](https://github.com/WelfareCheck/Data-Science-Foundations-using-R-Specialization/blob/master/Exploratory%20Data%20Analysis/Week%201/Lesson%201:%20Graphs/Histogram%20Rug.JPG?raw=true)
+![image info](https://github.com/WelfareCheck/Data-Science-Foundations-using-R-Specialization/blob/master/Exploratory%20Data%20Analysis/Week%201/Lesson%201:%20Graphs/multi%20hists.JPG?raw=true)
 
 ### ``` rug() ```
   - [?rug()](https://www.rdocumentation.org/packages/graphics/versions/3.6.2/topics/rug)
@@ -43,5 +45,13 @@
   
   
 ![image info](https://github.com/WelfareCheck/Data-Science-Foundations-using-R-Specialization/blob/master/Exploratory%20Data%20Analysis/Week%201/Lesson%201:%20Graphs/Barplot.JPG?raw=true)
+
+### ``` plot() ```
+  - [?plot()](https://www.rdocumentation.org/packages/graphics/versions/3.6.2/topics/plot)
+  - [scattterplot](https://www.statmethods.net/graphs/scatterplot.html)
+
+![image info](https://github.com/WelfareCheck/Data-Science-Foundations-using-R-Specialization/blob/master/Exploratory%20Data%20Analysis/Week%201/Lesson%201:%20Graphs/scatterplot.JPG?raw=true)
+![image info](https://github.com/WelfareCheck/Data-Science-Foundations-using-R-Specialization/blob/master/Exploratory%20Data%20Analysis/Week%201/Lesson%201:%20Graphs/scatterplot%20Color.JPG?raw=true)
+![image info](https://github.com/WelfareCheck/Data-Science-Foundations-using-R-Specialization/blob/master/Exploratory%20Data%20Analysis/Week%201/Lesson%201:%20Graphs/Multi%20scatterplot.JPG?raw=true)
 
   - Markdown basic writing and formating [here](https://help.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax)
