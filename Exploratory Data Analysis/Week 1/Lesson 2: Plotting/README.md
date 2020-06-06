@@ -17,6 +17,15 @@
 
 # The ggplot2 System
 	- Mixed elemtents of Base and Lattice
-	
+
+# Core plotting system packages
+- graphics
+- grDevices
+- lattice
+- grid
+
 
 ![image info](https://github.com/WelfareCheck/Data-Science-Foundations-using-R-Specialization/blob/master/Exploratory%20Data%20Analysis/Week%201/Lesson%202:%20Plotting/ggplot2.JPG?raw=true)
+
+-Parameters documented at
+[?par](https://www.rdocumentation.org/packages/graphics/versions/3.6.2/topics/par)
