@@ -18,14 +18,37 @@
 # The ggplot2 System
 	- Mixed elemtents of Base and Lattice
 
+![image info](https://github.com/WelfareCheck/Data-Science-Foundations-using-R-Specialization/blob/master/Exploratory%20Data%20Analysis/Week%201/Lesson%202:%20Plotting/ggplot2.JPGraw=true)
+
 # Core plotting system packages
 - graphics
 - grDevices
 - lattice
 - grid
 
-
-![image info](https://github.com/WelfareCheck/Data-Science-Foundations-using-R-Specialization/blob/master/Exploratory%20Data%20Analysis/Week%201/Lesson%202:%20Plotting/ggplot2.JPG?raw=true)
-
 -Parameters documented at
 [?par](https://www.rdocumentation.org/packages/graphics/versions/3.6.2/topics/par)
+
+-Two Phases to creating a base plot
+	- Initializing a new plot
+	- Annotating (adding to) an existing plot
+
+![image info]()
+
+# Some Important Base Graphics Parameters
+- ``` pch ``` the plotting symbol 
+- ``` lty ``` the line type
+- ``` lwd ``` the line width
+- ``` col ``` plotting color
+- ``` xlab ``` character string for the x-axis label
+- ``` ylab ``` character string for the y-axi  label
+
+# Base Graphics Parameters
+``` par() ``` function is used to spcify global graphic paramters that affect all plots in an R session
+- ``` par("las") ``` the proientation of the axis labels on the plot
+- ``` par("bg") ``` the background color
+- ``` par("mar") ``` the margin size
+- ``` par("oma") ```the outer margin size (default is 0 for all sides)
+- ``` par("mfrow") ``` number of plots per row, column (plots are filled row-wise)
+- ``` par("mfcol") ``` number of plots per row, column (plots are filled column-wise)
+
