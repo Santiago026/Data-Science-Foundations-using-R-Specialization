@@ -33,7 +33,11 @@
 	- Initializing a new plot
 	- Annotating (adding to) an existing plot
 
-![image info]()
+![image info](https://github.com/WelfareCheck/Data-Science-Foundations-using-R-Specialization/blob/master/Exploratory%20Data%20Analysis/Week%201/Lesson%202:%20Plotting/Base%20Simple%20Base%20Graphics%20Boxplot.JPG?raw=true)
+
+![image info](https://github.com/WelfareCheck/Data-Science-Foundations-using-R-Specialization/blob/master/Exploratory%20Data%20Analysis/Week%201/Lesson%202:%20Plotting/Base%20Simple%20Base%20Graphics%20Scatterplot.JPG?raw=true)
+
+![image info](https://github.com/WelfareCheck/Data-Science-Foundations-using-R-Specialization/blob/master/Exploratory%20Data%20Analysis/Week%201/Lesson%202:%20Plotting/Base%20Simple%20Base%20Graphics%20Histogram.JPG?raw=true)
 
 # Some Important Base Graphics Parameters
 - ``` pch ``` the plotting symbol 
