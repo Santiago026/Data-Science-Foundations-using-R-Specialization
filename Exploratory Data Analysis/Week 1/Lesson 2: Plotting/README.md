@@ -55,4 +55,3 @@
 - ``` par("oma") ```the outer margin size (default is 0 for all sides)
 - ``` par("mfrow") ``` number of plots per row, column (plots are filled row-wise)
 - ``` par("mfcol") ``` number of plots per row, column (plots are filled column-wise)
-
