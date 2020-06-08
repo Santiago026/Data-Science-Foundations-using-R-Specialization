@@ -9,3 +9,6 @@ This week covers the basics of analytic graphics and the base plotting system in
 - Practical R Exercises in swirl
 - Week 1 Quiz
 - Course Project 1
+
+### Reading material
+[THE WORK OF EDWARD TUFTE AND GRAPHICS PRESS](https://www.edwardtufte.com/tufte/)
