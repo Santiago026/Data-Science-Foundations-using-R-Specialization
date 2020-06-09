@@ -15,41 +15,41 @@ This week covers the basics of analytic graphics and the base plotting system in
 
 ### Graphics Devices in R
 
-See what graphics devices are available
-	?devices
+- See what graphics devices are available
+	- ``` ?devices ```
 
-plotting systems
-	plot
-	xyplot
-	qplot
-	with()
-		with(faithful, plot(eruptions, waiting))
+- plotting systems
+	- ``` plot() ```
+	- ```xyplot() ```
+	- ``` qplot() ````
+	- ```with() ```
+		example: ``` with(faithful, plot(eruptions, waiting)) ```
 	
-annotations
-	title()
-		title(main = "Old Faithful Geyser data")
+- annotations
+	- ``` title() ```
+		example: ``` title(main = "Old Faithful Geyser data") ```
 
-copy a plot from one device to another
-	dev.copy
-		dev.copy(png, file="geyserplot.png")
-	dev.copy2pdf
+- copy a plot from one device to another
+	- ``` dev.copy ```
+		example: ``` dev.copy(png, file="geyserplot.png") ```
+	- ``` dev.copy2pdf ```
 
-Change theactive graphics device
-	dev.set(<integer>)
+- Change theactive graphics device
+	- ``` dev.set(<integer>) ```
 
-See what the current plotting device is
-	dev.cur()
+- See what the current plotting device is
+	- ``` dev.cur() ```
 
-Send plot to a file device
-	pdf()
-		pdf(file="myplot.pdf")
+- Send plot to a file device
+	- ``` pdf() ```
+		- example: ``` pdf(file="myplot.pdf") ```
 
-Close the device
-	dev.off()
+- Close the device
+	- ``` dev.off() ```
 
-Types of file devices
-	Vector
-		 good for line drawings and plots with solid colors
+- Types of file devices
+	- Vector
+		 - good for line drawings and plots with solid colors
 			PDF
 				This is useful for line-type graphics and papers
 			svg
