@@ -9,7 +9,7 @@
   - visible, variety, vast
 
 - Which of these is NOT one of the main skills embodied by data scientists?
-  - *Machine learning**
+  - **Machine learning**
   - Hacking skills
   - Math and stats
 
