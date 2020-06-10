@@ -80,7 +80,7 @@ This week covers the basics of analytic graphics and the base plotting system in
 ### Graphics Devices in R
 
 - See what graphics devices are available
-	- ``` ?devices ```
+``` ?devices ```
 
 - plotting systems
 ``` 
@@ -89,15 +89,12 @@ xyplot()
 qplot()
 with()
 ```
-	- example: ``` with(faithful, plot(eruptions, waiting)) ```
 	
 - annotations
 ``` title() ```
-	- example: ``` title(main = "Old Faithful Geyser data") ```
 
 - copy a plot from one device to another
 ``` dev.copy() ```
-	- example: ``` dev.copy(png, file="geyserplot.png") ```
 ``` dev.copy2pdf ```
 
 - Change theactive graphics device
@@ -108,29 +105,31 @@ with()
 
 - Send plot to a file device
 ``` pdf() ```
-	- example: ``` pdf(file="myplot.pdf") ```
 
 - Close the device
 ``` dev.off() ```
 
-- Types of file devices
-	- Vector
-		 - good for line drawings and plots with solid colors
-			- PDF
-				- This is useful for line-type graphics and papers
-			- svg
-				- XML-based, scalable vector graphics. This supports | animation and interactivity and is potentially 					useful for web-based plots
-			- win.metafile
-				- a Windows-only metafile format
-			- postscript (ps)
-				- resizes well, is usually | portable, and can be used to create encapsulated postscript files
-	- Bitmap
-		- good for plots with a large number of | points, natural scenes or web-based plots
-			- png
-				 - good for line drawings or images with solid | colors
-			- JPEG
-				- good for photographs or natural scenes
-			- TIFF
-				- lossless compression | meta-format 	
-			- BMP
-				- a native Windows bitmapped format.
+#### Types of file devices
+- Vector
+	- good for line drawings and plots with solid colors
+		- PDF
+			- This is useful for line-type graphics and papers
+		- svg
+			- XML-based, scalable vector graphics. This supports | animation and interactivity and is potentially 					useful for web-based plots
+		- win.metafile
+			- a Windows-only metafile format
+		- postscript (ps)
+			- resizes well, is usually | portable, and can be used to create encapsulated postscript files
+- Bitmap
+	- good for plots with a large number of | points, natural scenes or web-based plots
+		- png
+			- good for line drawings or images with solid | colors
+		- JPEG
+			- good for photographs or natural scenes
+		- TIFF
+			- lossless compression | meta-format 	
+		- BMP
+			- a native Windows bitmapped format.
+
+### Plotting Systems
+
