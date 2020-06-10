@@ -1,24 +1,16 @@
-Getting Started and R Nuts and Bolts
-This week is all about getting started with R and learning some of the basic details of the language. If you haven't already installed R, you should go to the R web site and download R for your platform (Windows, Mac, or Unix/Linux). Also, if you want, you can download RStudio, which is a free interactive development environment designed for R that is very useful and we use quite a bit in the Data Science Specialization. I've made some videos to help you along with the installation process:
+# Welcome to R Programming
+I'm very excited to start R Programming and I hope you are too. This is the second course in the [Data Science Specialization](https://www.coursera.org/specialization/jhudatascience/1) and it focuses on the nuts and bolts of using R as a programming language.
 
-Installing R on Windows
-Installing R on a Mac
-Installing R on RStudio (on a Mac)
-Before you start using R, one key concept is the working directory. This is the directory/folder on your computer where you will store project files, data, and code. It's important that you tell R where the working directory is that you will be using so that it knows where to find the appropriate file (the working directory can be any directory on your computer). These videos tell you how to set your working directory:
+The recommended background for this course is the course [The Data Scientist's Toolbox](https://www.coursera.org/learn/data-scientists-tools). It is possible to take this class concurrently with that class but you may have to read ahead in the prerequisite class to get the relevant background for this class. For a complete set of course dependencies in the Data Science Specialization please see the [course dependency chart](https://d396qusza40orc.cloudfront.net/rprog/doc/JHDSS_CourseDependencies.pdf).
 
-Setting your working directory (Windows)
-Setting your working directory (Mac)
-Learning Objectives
-By the end of week 1 you should be able to:
+As you browse the course web site, please make sure to read through the **syllabus** which contains important information about the grading policy.
 
-Install the R and RStudio software packages
-Download and install the swirl package for R
-Describe the history of the S and R programming lectures
-Describe the differences between atomic data types
-Execute basic arithmetic operations
-Subset R objects using the "[", "[[", and "$" operators and logical vectors
-Describe the explicit coercion feature of R
-Remove missing (NA) values from a vector
-Assessments
-Quiz 1 - 80% or better required to pass
-There is no official graded programming assignment for this week. However, we have developed a series of practice exercises to get you started with R. These exercises are implemented using the swirl package for R. The swirl programming assignment is NOT required
+Please pay particular attention to the differences among the various Programming Assignments. Whereas Programming Assignments 1 and 3 are graded via unit tests that use a submission script that will compare the output of your functions to the correct output, Programming Assignment 2 requires that you submit R code for evaluation and grading by your classmates.
+
+The primary way to interact with me and the other students in this course is through the *discussion forums**. Here, you can start new threads by asking questions or you can respond to other people's questions. If you have a question about any aspect of the course, I strongly suggest that you search through the discussion boards first to see if anyone has already asked that question. If you see something similar to what you want to ask, you should up-vote that question using the up-arrow button rather than asking your question separately. The more votes a question or comment gets, the more likely it is that I will see it and be able to respond quickly. Of course, if you don't see a question similar to the one you want to ask, then you should definitely start a new thread on the appropriate forum.
+
+Finally, consider getting the course textbook, [R Programming for Data Science](https://leanpub.com/rprogramming?utm_source=coursera&utm_medium=CourseraEmail&utm_campaign=Coursera), which is available for free from Leanpub. The content in the book tracks the material covered in the course and allows you to hang on to the material once the course is finished.
+
+I hope you enjoy the class. I anticipate a fun four weeks!
+
+Roger Peng and the Data Science Team
