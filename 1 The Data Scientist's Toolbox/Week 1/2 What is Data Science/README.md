@@ -29,20 +29,16 @@ And this brings us to the second quality of big data: **velocity**. Data is bein
 
 The third quality of big data is **variety**. In the examples I’ve mentioned so far, you have different types of data available to you. In the YouTube example, you could be analysing video or audio, which is a very unstructured data set, or you could have a database of video lengths, views or comments, which is a much more structured dataset to analyse.
 
-![Caption for the picture.](/path/to/image.png)
+![A summary of three qualities that characterize big data](https://github.com/WelfareCheck/Data-Science-Foundations-using-R-Specialization/blob/master/1%20The%20Data%20Scientist's%20Toolbox/Week%201/2%20What%20is%20Data%20Science/1.png?raw=true)
 
-A summary of three qualities that characterize big data
-A summary of three qualities that characterize big data
-
-What is a data scientist?
+## What is a data scientist?
 So we’ve talked about what data science is and what sorts of data it deals with, but something else we need to discuss is what exactly a data scientist is.
 
 The most basic of definitions would be that a data scientist is somebody who uses data to answer questions. But more importantly to you, what skills does a data scientist embody?
 
-Drew Conway’s Venn diagram of data science
-Drew Conway’s Venn diagram of data science
+![Drew Conway’s Venn diagram of data science](https://github.com/WelfareCheck/Data-Science-Foundations-using-R-Specialization/blob/master/1%20The%20Data%20Scientist's%20Toolbox/Week%201/2%20What%20is%20Data%20Science/2.png?raw=true)
 
-And to answer this, we have this illustrative Venn diagram, in which data science is the intersection of three sectors - Substantive expertise, hacking skills, and math and statistics.
+And to answer this, we have this [illustrative Venn diagram](http://drewconway.com/zia/2013/3/26/the-data-science-venn-diagram), in which data science is the intersection of three sectors - Substantive expertise, hacking skills, and math and statistics.
 
 To explain a little on what we mean by this, we know that we use data science to answer questions - so first, we need to have enough expertise in the area that we want to ask about in order to formulate our questions and to know what sorts of data are appropriate to answer that question. Once we have our question and appropriate data, we know from the sorts of data that data science works with, often times it needs to undergo significant cleaning and formatting - and this often takes computer programming slash “hacking” skills. Finally, once we have our data, we need to analyse it, and this often takes math and stats knowledge.
 
@@ -50,8 +46,8 @@ In this specialization, we’ll spend a bit of time focusing on each of these th
 
 One reason data scientists are in such demand is that most of the answers aren’t already outlined in textbooks - a data scientist needs to be somebody who knows how to find answers to novel problems.
 
-Why do data science?
-Speaking of that demand, there is a huge need for individuals with data science skills. Not only are machine learning engineers, data scientists, and big data engineers among the top emerging jobs in 2017 according to LinkedIn, the demand far exceeds the supply.
+## Why do data science?
+Speaking of that demand, there is a huge need for individuals with data science skills. Not only are machine learning engineers, data scientists, and big data engineers among the top emerging jobs in 2017 [according to LinkedIn](https://economicgraph.linkedin.com/research/LinkedIns-2017-US-Emerging-Jobs-Report), the demand far exceeds the supply.
 
 Data scientist roles have grown over 650 percent since 2012, but currently 35,000 people in the US have data science skills, while hundreds of companies are hiring for those roles - even those you may not expect in sectors like retail and finance - supply of candidates for these roles cannot keep up with demand.
 
@@ -59,7 +55,7 @@ This is a great time to be getting in to data science - not only do we have more
 
 Additionally, according to Glassdoor, in which they ranked the top 50 best jobs in America, Data Scientist is THE top job in the US in 2017, based on job satisfaction, salary, and demand.
 
-Examples of data scientists
+## Examples of data scientists
 The diversity of sectors in which data science is being used is exemplified by looking at examples of data scientists.
 
 One place we might not immediately recognize the demand for data science is in sports – Daryl Morey is the general manager of a US basketball team, the Houston Rockets. Despite not having a strong background in basketball, Morey was awarded the job as GM on the basis of his bachelor’s degree in computer science and his M.B.A. from M.I.T. He was chosen for his ability to collect and analyse data, and use that to make informed hiring decisions.
@@ -72,10 +68,10 @@ uses statistical analysis - hard numbers - to tell compelling stories about elec
 
 He uses large amounts of totally free public data to make predictions about a variety of topics; most notably he makes predictions about who will win elections in the United States, and has a remarkable track record for accuracy doing so.
 
-Data science in action!
+## Data science in action!
 One great example of data science in action is from 2009, in which researchers at Google analysed 50 million commonly searched terms over a five year period, and compared them against CDC data on flu outbreaks. Their goal was to see if certain searches coincided with outbreaks of the flu. One of the benefits of data science and using big data is that it can identify correlations; in this case, they identified 45 words that had a strong correlation with the CDC flu outbreak data. With this data, they have been able to predict flu outbreaks based solely off of common Google searches! Without this mass amounts of data, these 45 words could not have been predicted beforehand.
 
-What will we teach you in this course?
+## What will we teach you in this course?
 Now that you have had this introduction into data science, all that really remains to cover here is a summary of what it is that we will be teaching you throughout this course. To start, we’ll go over the basics of R. R is the main programming language that we will be working with in this course track, so a solid understanding of what it is, how it works and getting it installed on your computer is a must. We’ll then transition into RStudio - which is a very nice graphical interface to R, that should make your life easier! We’ll then talk about version control, why it is important and how to integrate it into your work. And once you have all of these basics down, you’ll be all set to apply these tools to answering your very own data science questions!
 
 Looking forward to learning with you! Let’s get to it!
