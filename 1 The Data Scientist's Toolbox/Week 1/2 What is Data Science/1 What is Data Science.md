@@ -53,18 +53,18 @@ Data scientist roles have grown over 650 percent since 2012, but currently 35,00
 
 This is a great time to be getting in to data science - not only do we have more and more data, and more and more tools for collecting, storing, and analysing it, but the demand for data scientists is becoming increasingly recognized as important in many diverse sectors, not just business and academia.
 
-Additionally, according to Glassdoor, in which they ranked the top 50 best jobs in America, Data Scientist is THE top job in the US in 2017, based on job satisfaction, salary, and demand.
+Additionally, according to [Glassdoor](https://www.glassdoor.com/List/Best-Jobs-in-America-LST_KQ0,20.htm), in which they ranked the top 50 best jobs in America, Data Scientist is THE top job in the US in 2017, based on job satisfaction, salary, and demand.
 
 ## Examples of data scientists
 The diversity of sectors in which data science is being used is exemplified by looking at examples of data scientists.
 
-One place we might not immediately recognize the demand for data science is in sports – Daryl Morey is the general manager of a US basketball team, the Houston Rockets. Despite not having a strong background in basketball, Morey was awarded the job as GM on the basis of his bachelor’s degree in computer science and his M.B.A. from M.I.T. He was chosen for his ability to collect and analyse data, and use that to make informed hiring decisions.
+One place we might not immediately recognize the demand for data science is in sports – [Daryl Morey](https://twitter.com/dmorey) is the general manager of a US basketball team, the Houston Rockets. [Despite not having a strong background in basketball](http://www.nytimes.com/2008/01/28/sports/basketball/28morey.html), Morey was awarded the job as GM on the basis of his bachelor’s degree in computer science and his M.B.A. from M.I.T. He was chosen for his ability to collect and analyse data, and use that to make informed hiring decisions.
 
-Another data scientist that you may have heard of is Hilary Mason. She is a co-founder of FastForward labs, a machine learning company recently acquired by Cloudera, a data science company, and is the Data Scientist in Residence at Accel. Broadly, she uses data to answer questions about mining the web and understanding the way that humans interact with each other through social media.
+Another data scientist that you may have heard of is [Hilary Mason](https://hilarymason.com/). She is a co-founder of FastForward labs, a machine learning company recently acquired by Cloudera, a data science company, and is the Data Scientist in Residence at Accel. Broadly, she uses data to answer questions about mining the web and understanding the way that humans interact with each other through social media.
 
-And finally, Nate Silver is one of the most famous data scientists or statisticians in the world today. He is founder and editor in chief at FiveThirtyEight - A website that
+And finally, Nate Silver is one of the most famous data scientists or statisticians in the world today. He is founder and editor in chief at [FiveThirtyEight](http://fivethirtyeight.com/) - A website that
 
-uses statistical analysis - hard numbers - to tell compelling stories about elections, politics, sports, science, economics and lifestyle.
+#### uses statistical analysis - hard numbers - to tell compelling stories about elections, politics, sports, science, economics and lifestyle.
 
 He uses large amounts of totally free public data to make predictions about a variety of topics; most notably he makes predictions about who will win elections in the United States, and has a remarkable track record for accuracy doing so.
 
