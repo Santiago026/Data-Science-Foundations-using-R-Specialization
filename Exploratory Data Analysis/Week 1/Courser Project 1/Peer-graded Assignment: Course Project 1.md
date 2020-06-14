@@ -77,4 +77,16 @@ The four plots that you will need to construct are shown below.
 
 Plot 1
 
-![]()
+![1](https://github.com/WelfareCheck/Data-Science-Foundations-using-R-Specialization/blob/master/Exploratory%20Data%20Analysis/Week%201/Courser%20Project%201/plot%201.png?raw=true)
+
+Plot 2
+
+1[2](https://github.com/WelfareCheck/Data-Science-Foundations-using-R-Specialization/blob/master/Exploratory%20Data%20Analysis/Week%201/Courser%20Project%201/plot%202.png?raw=true)
+
+Plot 3
+
+1[3](https://github.com/WelfareCheck/Data-Science-Foundations-using-R-Specialization/blob/master/Exploratory%20Data%20Analysis/Week%201/Courser%20Project%201/plot%203.png?raw=true)
+
+Plot 4
+
+1[4](https://github.com/WelfareCheck/Data-Science-Foundations-using-R-Specialization/blob/master/Exploratory%20Data%20Analysis/Week%201/Courser%20Project%201/plot%204.png?raw=true)
