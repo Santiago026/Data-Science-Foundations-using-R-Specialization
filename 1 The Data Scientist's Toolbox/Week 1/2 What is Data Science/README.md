@@ -1,7 +1,7 @@
 # Welcome to the Data Scientist’s Toolbox
 Hello, and welcome to The Data Scientist’s Toolbox, the first course in the Data Science Specialization series. Here, we will be going over the basics of data science and introducing you to the tools that will be used throughout the series.
 
-##What is data science?
+## What is data science?
 So the first question you probably need answered going into this course is, “What is Data Science?” - and that is a great question. To different people, this means different things, but at its core, data science is using data to answer questions. This is a pretty broad definition, and that’s because it’s a pretty broad field!
 
 Data science can involve:
