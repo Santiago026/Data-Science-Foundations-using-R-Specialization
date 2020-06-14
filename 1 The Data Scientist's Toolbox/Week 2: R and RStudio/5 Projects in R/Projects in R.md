@@ -23,25 +23,25 @@ Let’s create a Project from scratch, which is often what you will be doing!
 
 Open RStudio, and under File, select “New Project”. You can also create a new Project by using the Projects toolbar and selecting “New Project” in the drop down menu, or there is a “New Project” shortcut in the toolbar.
 
-![1]()
+![1](https://github.com/WelfareCheck/Data-Science-Foundations-using-R-Specialization/blob/master/1%20The%20Data%20Scientist's%20Toolbox/Week%202:%20R%20and%20RStudio/5%20Projects%20in%20R/Projects%20in%20R%201.png?raw=true)
 
 **Ways to initiate a new project**
 
 Since we are starting from scratch, select “New Project” and a window will appear. Select “New Directory” and when prompted about the Project type, select “New Project”
 
-![2]()
+![2](https://github.com/WelfareCheck/Data-Science-Foundations-using-R-Specialization/blob/master/1%20The%20Data%20Scientist's%20Toolbox/Week%202:%20R%20and%20RStudio/5%20Projects%20in%20R/Projects%20in%20R%202.png?raw=true)
 
 **New project options**
 
 Pick a name for your project and for this time, save it to your Desktop. This will create a folder on your Desktop where all of the files associated with this Project will be kept. Click “Create Project.”
 
-![3]()
+![3](https://github.com/WelfareCheck/Data-Science-Foundations-using-R-Specialization/blob/master/1%20The%20Data%20Scientist's%20Toolbox/Week%202:%20R%20and%20RStudio/5%20Projects%20in%20R/Projects%20in%20R%203.png?raw=true)
 
 **Creating a new project**
 
 A blank RStudio session should open.
 
-![4]()
+![4](https://github.com/WelfareCheck/Data-Science-Foundations-using-R-Specialization/blob/master/1%20The%20Data%20Scientist's%20Toolbox/Week%202:%20R%20and%20RStudio/5%20Projects%20in%20R/Projects%20in%20R%204.png?raw=true)
 
 Your new project
 
@@ -50,7 +50,7 @@ Your new project
 1) In the “Files” quadrant of the screen, you can see that RStudio has made this new directory your working directory and generated a single file with the extension “.Rproj”
 2) In the upper-right of the window, there is a Projects toolbar that states the name of your current Project and has a drop down menu with a few different options that we’ll talk about in a second.
 
-![5]()
+![5](https://github.com/WelfareCheck/Data-Science-Foundations-using-R-Specialization/blob/master/1%20The%20Data%20Scientist's%20Toolbox/Week%202:%20R%20and%20RStudio/5%20Projects%20in%20R/Projects%20in%20R%205.png?raw=true)
 
 **Note the new project file in the Files quadrant and the Project toolbar**
 
@@ -58,7 +58,7 @@ Your new project
 
 Opening an existing Project is as simple as double clicking the .Rproj file on your computer. You can accomplish the same from within RStudio by opening RStudio and going to File > Open Project. You can also use the Project toolbar and open the drop down menu and select “Open Project…”
 
-![6]()
+![6](https://github.com/WelfareCheck/Data-Science-Foundations-using-R-Specialization/blob/master/1%20The%20Data%20Scientist's%20Toolbox/Week%202:%20R%20and%20RStudio/5%20Projects%20in%20R/Projects%20in%20R%206.png?raw=true)
 
 **Ways to open a project**
 
@@ -66,7 +66,7 @@ Opening an existing Project is as simple as double clicking the .Rproj file on y
 
 Quitting a project is as simple as closing your RStudio window. You can also go to File > Close Project, and this will do the same. Finally, you can use the Project toolbar by clicking on the drop down menu and choosing “Close Project”.
 
-![7]()
+![7](https://github.com/WelfareCheck/Data-Science-Foundations-using-R-Specialization/blob/master/1%20The%20Data%20Scientist's%20Toolbox/Week%202:%20R%20and%20RStudio/5%20Projects%20in%20R/Projects%20in%20R%207.png?raw=true)
 
 # Ways to quit a project
 
@@ -74,7 +74,7 @@ All of these options will quit a Project and doing so will cause RStudio to writ
 
 The Projects toolbar is also an easy way to switch between Projects - click on the drop down menu and choose “Open Project” and find your new Project you want to open - this will save the current Project, close it, and then open the new Project within the same window. If you want multiple Projects open at the same time, do the same but instead select “Open Project in New Session”. This can also be accomplished through the File menu, where those same options are available.
 
-![8]()
+![8](https://github.com/WelfareCheck/Data-Science-Foundations-using-R-Specialization/blob/master/1%20The%20Data%20Scientist's%20Toolbox/Week%202:%20R%20and%20RStudio/5%20Projects%20in%20R/Projects%20in%20R%208.png?raw=true)
 
 **Ways to switch between projects**
 
@@ -84,7 +84,7 @@ When you are setting up a project, it can be helpful to start out creating a few
 
 For example:
 
-![9]()
+![9](https://github.com/WelfareCheck/Data-Science-Foundations-using-R-Specialization/blob/master/1%20The%20Data%20Scientist's%20Toolbox/Week%202:%20R%20and%20RStudio/5%20Projects%20in%20R/Projects%20in%20R%209.png?raw=true)
 
 **An example of a possible folder structure to organize your project**
 
@@ -93,11 +93,3 @@ If you set up these folders before you start, it can save you organizational hea
 # Summary
 
 In this lesson we’ve covered what Projects in R are, why you might want to use them, how to open, close, or switch between projects, and some best practices to best set you up for organizing yourself!
-
-
-
-
-
-
-
-
