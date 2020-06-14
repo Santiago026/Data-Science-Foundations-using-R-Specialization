@@ -17,20 +17,20 @@ There are three big repositories:
 2. [BioConductor](https://bioconductor.org/packages/release/BiocViews.html#___Software): A repository mainly for bioinformatic-focused packages
 3. [GitHub](https://github.com/collections): A very popular, open source repository (not R specific!)
 
-![1]()
+![1](https://github.com/WelfareCheck/Data-Science-Foundations-using-R-Specialization/blob/master/1%20The%20Data%20Scientist's%20Toolbox/Week%202:%20R%20and%20RStudio/4%20R%20Packages/R%20Packages%201.png?raw=true)
 
 **The big three repositories for R packages**
 
 ## How do you know what package is right for you?
 So you know where to find packages… but there are so many of them, how can you find a package that will do what you are trying to do in R? There are a few different avenues for exploring packages.
 
-First, CRAN groups all of its packages by their functionality/topic into 35 “themes.” It calls this its “Task view.” This at least allows you to narrow the packages you can look through to a topic relevant to your interests.
+First, CRAN groups all of its packages by their functionality/topic into 35 “themes.” It calls this its [“Task view.”](https://cran.r-project.org/web/views/) This at least allows you to narrow the packages you can look through to a topic relevant to your interests.
 
-![2]()
+![2](https://github.com/WelfareCheck/Data-Science-Foundations-using-R-Specialization/blob/master/1%20The%20Data%20Scientist's%20Toolbox/Week%202:%20R%20and%20RStudio/4%20R%20Packages/R%20Packages%202.png?raw=true)
 
 **CRAN’s “Task View” that groups packages into 35 topics**
 
-Second, there is a great website, RDocumentation, which is a search engine for packages and functions from CRAN, BioConductor, and GitHub (ie: the big three repositories). If you have a task in mind, this is a great way to search for specific packages to help you accomplish that task! It also has a “task” view like CRAN, that allows you to browse themes.
+Second, there is a great website, [RDocumentation](https://www.rdocumentation.org/), which is a search engine for packages and functions from CRAN, BioConductor, and GitHub (ie: the big three repositories). If you have a task in mind, this is a great way to search for specific packages to help you accomplish that task! It also has a [“task” view](https://www.rdocumentation.org/taskviews) like CRAN, that allows you to browse themes.
 
 More often, if you have a specific task in mind, Googling that task followed by “R package” is a great place to start! From there, looking at tutorials, vignettes, and forums for people already doing what you want to do is a great way to find relevant packages.
 
@@ -38,7 +38,7 @@ More often, if you have a specific task in mind, Googling that task followed by 
 Great! You’ve found a package you want… How do you install it?
 
 **Installing from CRAN**
-If you are installing from the CRAN repository, use the install.packages() function, with the name of the package you want to install in quotes between the parentheses (note: you can use either single or double quotes). For example, if you want to install the package “ggplot2”, you would use: install.packages("ggplot2")
+If you are installing from the CRAN repository, use the ```install.packages()``` function, with the name of the package you want to install in quotes between the parentheses (note: you can use either single or double quotes). For example, if you want to install the package “ggplot2”, you would use: ```install.packages("ggplot2")```
 
 Try doing so in your R console! This command downloads the “ggplot2” package from CRAN and installs it onto your computer.
 
@@ -49,31 +49,31 @@ install.packages(c("ggplot2", "devtools", "lme4"))
 
 If you want to use RStudio’s graphical interface to install packages, go to the Tools menu, and the first option should be “Install packages…” If installing from CRAN, select it as the repository and type the desired packages in the appropriate box.
 
-![3]()
+![3](https://github.com/WelfareCheck/Data-Science-Foundations-using-R-Specialization/blob/master/1%20The%20Data%20Scientist's%20Toolbox/Week%202:%20R%20and%20RStudio/4%20R%20Packages/R%20Packages%203.png?raw=true)
 
 **Various methods to install packages within R/RStudio**
 
-![4]()
+![4](https://github.com/WelfareCheck/Data-Science-Foundations-using-R-Specialization/blob/master/1%20The%20Data%20Scientist's%20Toolbox/Week%202:%20R%20and%20RStudio/4%20R%20Packages/R%20Packages%204.png?raw=true)
 
 **Installing packages from CRAN through R/RStudio**
 
-**Installing from Bioconductor*
-The BioConductor repository uses their own method to install packages. First, to get the basic functions required to install through BioConductor, use: source("https://bioconductor.org/biocLite.R")
+**Installing from Bioconductor**
+The BioConductor repository uses their own method to [install packages](https://www.bioconductor.org/install/). First, to get the basic functions required to install through BioConductor, use: ```source("https://bioconductor.org/biocLite.R")```
 
-This makes the main install function of BioConductor, biocLite(), available to you. Following this, you call the package you want to install in quotes, between the parentheses of the biocLite command, like so:``` biocLite("GenomicFeatures")```
+This makes the main install function of BioConductor, ```biocLite()```, available to you. Following this, you call the package you want to install in quotes, between the parentheses of the biocLite command, like so:``` biocLite("GenomicFeatures")```
 
-![5]()
+![5](https://github.com/WelfareCheck/Data-Science-Foundations-using-R-Specialization/blob/master/1%20The%20Data%20Scientist's%20Toolbox/Week%202:%20R%20and%20RStudio/4%20R%20Packages/R%20Packages%205.png?raw=true)
 
 **Installing packages with BioConductor**
 
 **Installing from GitHub**
-This is a more specific case that you probably won’t run into too often. In the event you want to do this, you first must find the package you want on GitHub and take note of both the package name AND the author of the package. Check out this guide for installing from GitHub, but the general workflow is:
+This is a more specific case that you probably won’t run into too often. In the event you want to do this, you first must find the package you want on GitHub and take note of both the package name AND the author of the package. Check out [this guide](http://kbroman.org/pkg_primer/pages/github.html) for installing from GitHub, but the general workflow is:
 
 1. ```install.packages("devtools")``` - only run this if you don’t already have devtools installed. If you’ve been following along with this lesson, you may have installed it when we were practicing installations using the R console
 2. ```library(devtools)``` - more on what this command is doing immediately below this
 3. ```install_github("author/package")``` replacing “author” and “package” with their GitHub username and the name of the package.
 
-![6]()
+![6](https://github.com/WelfareCheck/Data-Science-Foundations-using-R-Specialization/blob/master/1%20The%20Data%20Scientist's%20Toolbox/Week%202:%20R%20and%20RStudio/4%20R%20Packages/R%20Packages%206.png?raw=true)
 
 **Installing packages from GitHub**
 
@@ -82,15 +82,15 @@ Installing a package does not make its functions immediately available to you. F
 
 **NOTE**: Do not put the package name in quotes! Unlike when you are installing the packages, the library() command does not accept package names in quotes!
 
-![7]()
+![7](https://github.com/WelfareCheck/Data-Science-Foundations-using-R-Specialization/blob/master/1%20The%20Data%20Scientist's%20Toolbox/Week%202:%20R%20and%20RStudio/4%20R%20Packages/R%20Packages%207.png?raw=true)
 
 **Step one of getting a package is installing it, but to use it, you must load it using library(); similar to installing R and then loading it by opening the .exe file**
 
-There is an order to loading packages - some packages require other packages to be loaded first (dependencies). That package’s manual/help pages will help you out in finding that order, if they are picky.
+There is an order to loading packages - some packages require other packages to be loaded first (**dependencies**). That package’s manual/help pages will help you out in finding that order, if they are picky.
 
 If you want to load a package using the RStudio interface, in the lower right quadrant there is a tab called “Packages” that lists out all of the packages and a brief description, as well as the version number, of all of the packages you have installed. To load a package just click on the checkbox beside the package name
 
-![8]()
+![8](https://github.com/WelfareCheck/Data-Science-Foundations-using-R-Specialization/blob/master/1%20The%20Data%20Scientist's%20Toolbox/Week%202:%20R%20and%20RStudio/4%20R%20Packages/R%20Packages%208.png?raw=true)
 
 **Using the RStudio interface to load a package**
 
@@ -107,13 +107,13 @@ You can check what packages need an update with a call to the function ```old.pa
 
 To update all packages, use update.packages(). If you only want to update a specific package, just use once again ```install.packages("packagename")```
 
-![9]()
+![9](https://github.com/WelfareCheck/Data-Science-Foundations-using-R-Specialization/blob/master/1%20The%20Data%20Scientist's%20Toolbox/Week%202:%20R%20and%20RStudio/4%20R%20Packages/R%20Packages%209.png?raw=true)
 
 **Functions used to see what packages are installed and update them**
 
 Within the RStudio interface, still in that Packages tab, you can click “Update,” which will list all of the packages that are not up to date. It gives you the option to update all of your packages, or allows you to select specific packages.
 
-![9]()
+![10](https://github.com/WelfareCheck/Data-Science-Foundations-using-R-Specialization/blob/master/1%20The%20Data%20Scientist's%20Toolbox/Week%202:%20R%20and%20RStudio/4%20R%20Packages/R%20Packages%2010.png?raw=true)
 
 **Using the RStudio interface to update your packages**
 
@@ -125,7 +125,7 @@ Sometimes you want to unload a package in the middle of a script - the package y
 
 To unload a given package you can use the ```detach()``` function. For example, ```detach("package:ggplot2", unload=TRUE)``` would unload the ggplot2 package (that we loaded earlier). Within the RStudio interface, in the Packages tab, you can simply unload a package by unchecking the box beside the package name.
 
-![10]()
+![11](https://github.com/WelfareCheck/Data-Science-Foundations-using-R-Specialization/blob/master/1%20The%20Data%20Scientist's%20Toolbox/Week%202:%20R%20and%20RStudio/4%20R%20Packages/R%20Packages%2011.png?raw=true)
 
 **Unloading or “detaching” a package**
 
@@ -137,7 +137,7 @@ If you no longer want to have a package installed, you can simply uninstall it u
 
 Within RStudio, in the Packages tab, clicking on the “X” at the end of a package’s row will uninstall that package.
 
-![11]()
+![12](https://github.com/WelfareCheck/Data-Science-Foundations-using-R-Specialization/blob/master/1%20The%20Data%20Scientist's%20Toolbox/Week%202:%20R%20and%20RStudio/4%20R%20Packages/R%20Packages%2012.png?raw=true)
 
 **Uninstalling packages**
 
@@ -147,7 +147,7 @@ Sometimes, when you are looking at a package that you might want to install, you
 
 One way to know your R version is to check when you first open R/RStudio - the first thing it outputs in the console tells you what version of R is currently running. If you didn’t pay attention at the beginning, you can type version into the console and it will output information on the R version you are running. Another helpful command is ```sessionInfo()``` - it will tell you what version of R you are running along with a listing of all of the packages you have loaded. The output of this command is a great detail to include when posting a question to forums - it tells potential helpers a lot of information about your OS, R, and the packages (plus their version numbers!) that you are using.
 
-![12]()
+![13](https://github.com/WelfareCheck/Data-Science-Foundations-using-R-Specialization/blob/master/1%20The%20Data%20Scientist's%20Toolbox/Week%202:%20R%20and%20RStudio/4%20R%20Packages/R%20Packages%2013.png?raw=true)
 
 **Ways to see what version of R you are running**
 
@@ -157,7 +157,7 @@ In all of this information about packages, we haven’t actually discussed how t
 
 First, you need to know what functions are included within a package. To do this, you can look at the man/help pages included in all (well-made) packages. In the console, you can use the help() function to access a package’s help files. Try ```help(package = "ggplot2")``` and you will see all of the many functions that ggplot2 provides. Within the RStudio interface, you can access the help files through the Packages tab (again) - clicking on any package name should open up the associated help files in the “Help” tab, found in that same quadrant, beside the Packages tab. Clicking on any one of these help pages will take you to that functions help page, that tells you what that function is for and how to use it.
 
-![13]()
+![14](https://github.com/WelfareCheck/Data-Science-Foundations-using-R-Specialization/blob/master/1%20The%20Data%20Scientist's%20Toolbox/Week%202:%20R%20and%20RStudio/4%20R%20Packages/R%20Packages%2014.png?raw=true)
 
 **The help functions available to you**
 
@@ -165,7 +165,7 @@ Once you know what function within a package you want to use, you simply call it
 
 If you still have questions about what functions within a package are right for you or how to use them, many packages include “vignettes.” These are extended help files, that include an overview of the package and its functions, but often they go the extra mile and include detailed examples of how to use the functions in plain words that you can follow along with to see how to use the package. To see the vignettes included in a package, you can use the ```browseVignettes()``` function. For example, let’s look at the vignettes included in ggplot2: ```browseVignettes("ggplot2")``` . You should see that there are two included vignettes: “Extending ggplot2” and “Aesthetic specifications.” Exploring the Aesthetic specifications vignette is a great example of how vignettes can be helpful, clear instructions on how to use the included functions.
 
-![14]()
+![15](https://github.com/WelfareCheck/Data-Science-Foundations-using-R-Specialization/blob/master/1%20The%20Data%20Scientist's%20Toolbox/Week%202:%20R%20and%20RStudio/4%20R%20Packages/R%20Packages%2015.png?raw=true)
 
 **How to browse vignettes for packages**
 
