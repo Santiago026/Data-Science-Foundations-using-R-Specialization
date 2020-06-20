@@ -1,0 +1,144 @@
+One of the main skills you
+are going to be called upon for as a data scientist is your
+ability to solve problems. And sometimes to do that, you need help. The ability to solve problems
+is at the root of data science. So the importance of being able to do so
+is paramount. In this lesson, we are going to equip you
+with some strategies to help you when you get stuck with a problem and
+need some help. Much of this information has been compiled
+from Roger Peng's video on Getting Help. And Eric Raymond's How to
+Ask Questions the Smart Way, so definitely check out those resources. Before we dive into how to get help, we first need to focus on why you
+need these skills in the first place. First off,
+this course is not like a standard class you have taken before where there
+may be 30 to 100 people and you have access to your professor for
+immediate help. In this class, at any one time there can
+be thousands of students taking the class, no one person could provide help to
+all of these people all of the time. So we'll introduce you to some strategies
+to deal with getting help in this course. Also, as we said earlier, being able to solve problems is often one
+of the core skills of a data scientist. Data science is new, you may be the first
+person to come across a specific problem and you need to be equipped with
+skills that allow you to tackle problems that are both new to you and
+the community. Finally, troubleshooting and figuring out solutions to problems
+is a great transferable skill. It will serve you well as
+a data scientist, but so much of what any job often
+entails is problem solving. Being able to think about problems and get
+help effectively is a benefit to you in whatever career path you find yourself in. Before you begin asking others for help on your problem, there are a few
+steps you can take on your own. Oftentimes, the fastest answer
+is one you find for yourself. One of your first stops for data analysis
+problems should be reading the manuals or help files. For our problems,
+try typing question mark command. If you post a question on a forum that
+is easily answered by the manual, you will often get a reply of,
+read the manual. Which is not the easiest way to get
+at the answer you were going for. Next steps are searching on Google and
+searching relevant forums. Common forums for data science
+problems include Stack Overflow and Cross Validated. Additionally, for you in this class, there is a course forum that is
+a great resource and super helpful. Before posting a question to any forum,
+try and double-check that it hasn't been asked
+before using the forum search functions. While you are Googling, things to pay
+attention to and look for are tutorials, FAQs, or vignettes of whatever command or
+program is giving you trouble. These are great resources
+to get you started. Either in telling you the language/words
+to use in your next searches or outright showing you how to do something. As you get further into this course and using R, you may run into
+coding problems and errors. And there are a few strategies you
+should have ready to deal with these. In my experience, coding problems
+generally fall into two categories. Your command produces no data and
+spits out an error message, or your command produces an output but
+it is not at all what you wanted. These two problems have different
+strategies for dealing with them. If you are getting an error message,
+I've been there. You type out a command and all you get
+are lines and lines of angry red text telling you that you did something
+wrong and this can be overwhelming. But taking a second to check over your
+command for typos and then carefully reading the error message solves
+the problem in nearly all of the cases. The error messages are there to help you. It is the computer telling
+you what went wrong. And when all else fails,
+you can be pretty assured that somebody out there got the same error
+message panicked and posted to a forum. The answer is out there. On the other hand, If you get an output, consider how the output was
+different from what you expected. And think about what it looks
+like the command actually did, why it would do that,
+and not what you wanted. Most problems like this are because
+the command you provided told the program to do one thing,
+and it did that thing exactly. It just turns out what you told it to
+do wasn't actually what you wanted. These problems are often
+the most frustrating. You are so close, but so far. These sorts of problems give you plenty of
+practice thinking like a computer program. All right, you've done everything you're
+supposed to do to solve the problem on your own. You need to bring in the big guns now,
+other people. Easiest is to find a peer with some
+experience with what you are working on, and ask them for help/direction. This is often great because the person
+explaining gets to solidify their understanding while teaching it to you. And you get a hands-on experience seeing
+how they would solve the problem. In this class,
+your peers can be your classmates, and you can interact with them
+through the course forum. Double-check your question
+hasn't been asked already. But outside of this course, you may not
+have too many data science savvy peers. What then? Rubber duck debugging is a long held
+tradition of solitary programmers everywhere. In the book, The Pragmatic Programmer,
+there is a story of how stumped programmers would explain their
+problem to a rubber duck and in the process of explaining the problem,
+identify the solution. Wikipedia explains it well. Many programmers have had the experience
+of explaining a programming problem to someone else, possibly even to someone
+who knows nothing about programming. And then hitting upon the solution in
+the process of explaining the problem. In describing what the code is supposed to
+do and observing what it actually does, any incongruity between
+these two becomes apparent. So next time you are stumped,
+bring out the bath toys. You've done your best, you've searched and
+searched, you've talked with peers, you've done everything possible to figure it
+out on your own and you are still stuck. It's time, time to post your
+question to a relevant forum. Before you go ahead and
+just post your question, you need to consider how you can best ask
+your question to garner helpful answers. Try to include details such as a very
+specific question that you are trying to answer and what steps you have
+already taken in your troubleshooting. Give details on how to reproduce
+the problem and include sample data for troubleshooters to work from. Explain what your goal and expected output are in detail and
+what your output was instead. If you got an error message,
+definitely mention that in your post. Additionally, relevant details about your
+operating system or version of the product in question are often helpful details
+to your potential problem solvers. One of the most important details
+of your posting is the title. It is what signals to others
+what you are having trouble. There is a art to titling your posts. Without being specific you don't give your
+potential helpers a lot to go off of. They don't really know what the problem
+is and if they are able to help you. Instead, you need to provide some details
+about what you are having problems with. Answering what you were doing and what the problem is are two key pieces
+of information that you need to provide. This way, somebody who is on the forum
+will know exactly what is happening and that they might be able to help. Use titles that focus on
+the very specific core problem that you are trying to get help with. It signals to people that you
+are looking for a very specific answer. The more specific the question,
+often the faster the answer. Following all of the tips mentioned so far will serve you well in posting on
+forums and observing forum etiquette. You are asking for help. You are hoping somebody else will take
+time out of their day to help you. You need to be courteous. Often this takes the form of
+asking specific questions, doing some troubleshooting of your own. And giving potential problem solvers
+easy access to all the information they need to help you. Formalizing some of these dos and don'ts,
+you get some guidelines to follow. Before posting, make sure you're asking
+your question in an appropriate form and read the forum posting guidelines. Make sure you describe your goal and are
+explicit and detailed in your explanation of the problem in your
+problem solving steps so far. Provide the minimum information required
+to describe and replicate the problem. Don't bog people down
+with unrelated problems. And finally, the big two. One, be courteous. These people are helping you. And two, make sure to follow up on
+your post and post the solution. Not only do the people helping
+you deserve thanks, but this is helpful to anybody else who
+has the same problem as you later on. There are also pretty clear
+guidelines on what not to do. First, nobody wants to help somebody who
+assumes that the root cause of the problem isn't because they have made a mistake,
+but that there is something
+wrong with the program. Spoiler alert. It's almost always because
+you made a mistake. Similarly, nobody wants to
+do your homework for you. They want to help somebody who
+is genuinely trying to learn, not find a shortcut. Additionally, for people active
+on multiple forums, it is always aggravating when the same person posts the
+same question on five different forums. Or when the same question is posted on
+the same forum repeatedly, be patient. Pick the most relevant forum for
+your purposes, post once and wait. There is an art to problem solving and the only way to get practice is to get
+out there and start solving problems. In this lesson, we look at how to effectively get
+help when you run into a problem. This is important for this course, but
+also for your future as a data scientist. We first looked at strategies
+to use before asking for help. Including reading the manual, checking
+the help files, and searching Google and appropriate forums. We also covered some common
+coding problems you may face and some preliminary steps
+you can take on your own. Including paying special
+attention to error messages and examining how your code
+behaved compared to your goal. Once you've exhausted these options,
+we turn to other people for help. We can ask peers for help or explain our
+problems to our trusty rubber ducks, be it an actual rubber duck or
+an unsuspecting coworker. Our course forum is also
+a great resource for you all to talk with many of your peers. Go introduce yourself. And if all else fails, we can post on
+forums, be it in this class or at another forum, like Stack Overflow, with very
+specific, reproducible questions. Before doing so, be sure to brush
+up on your forum etiquette. It never hurt anybody to be polite. Be a good citizen of our forums. There is an art to problem solving, and the only way to get practice is to get
+out there and start solving problems. Get to it.
