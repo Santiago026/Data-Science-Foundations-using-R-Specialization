@@ -1,0 +1,119 @@
+Often the data that you load into R,
+will not necessarily be tidy. It will shaped in some strange way, or
+there will be a variable in a row, or there will be something else going on. And so, the first thing that
+you might need to do is reshape the data into the format that
+you'd like to have it in. So the goal remember, is tidy data. So, tidy data has several principles,
+for example, we would like every variable
+to form its own column. Every observation to form its own row. And each table or file to store data
+about only one kind of observation. We're gonna focus on the first two
+components of this when we're doing data reshaping. So, we're gonna start off by
+looking at this mtcars data set. So this is a data set that's one
+of the standard data sets in R. And so, we have a bunch of different
+cars over here in the rows. And then there's a bunch of different
+variables that we've observed about them. Their MPG, the number of cylinders,
+the horsepower, and so forth. And so what we're gonna do is deal
+with reshaping this data a little bit. So the first thing that we can do
+is we can melt the data set, and so when we're melting a data set, what we're
+gonna do is we're gonna pass the data frame that we have mtcars, we're gonna
+actually pass it to this melt function. And we're gonna tell it which of
+the variables are ID variables, and which of the variables
+are measure variables. And so what that can do then is it's
+going to create a bunch of ID values. And so for example it's going to
+create an id value for car name, for gear and for cylinders, because we've
+said those are id variables here. And then it's going to basically
+melt all the rest of the values. So this is a very tall,
+skinny data frame so that in this variable column,
+you will see both mpg and hp. So it's basically reshaped the data set so
+that it's tall and skinny and so there's one row for
+every mpg and one row for every hp. So for example, at the top of this data
+set, we see it's only the mpg values, and at the bottom of the data set
+we see it's only the hp values. This is now a tall, skinny data set. So once we've melted the data set we can
+recast it in a bunch of different ways. We can basically reformat the data
+set into different sort of shapes. So to do that we're gonna
+use the dcast function. The dcast function will recast
+the data set into a particular shape, into a particular data frame. So here, what we're going to do is,
+we're gonna pass it the melted data set, the car melted data set. And suppose, for example,
+that we wanted to see the cylinders, and we wanted to see that broken
+down by the different variables. What this will do is, it's going to put the different values on the left
+hand side, in the rows, and its going to put the values in
+the right hand side in the columns. So on the right hand side it's variable,
+remember for variable we said it was mpg and hp so
+you get that in the two columns here. And then in the rows we get
+the different cylinders going down here. And the thing that it does is
+it summarizes the data set so you can see this data set is much
+smaller than the original data set, and, by default, it does it by link. So it says is that, for 4 cylinders, we have 11 measures of mpg and
+11 measures of horsepower, for 6 cylinders, we have 7 measures of mpg and
+7 measures of horsepower, and so forth. We can also pass it a different function,
+a different way to summarize the data. So again, if we tell it to recast
+the data in this way it'll put cylinders in the rows and
+the variable in the columns, and then what we can tell it to do
+is take the mean for each value. So for example, now we can say,
+for the four cylinder car, the mean miles per gallon is 26.66 and
+the mean horsepower is 82.64. Meanwhile, for an eight cylinder car, there's a much lower mean miles per
+gallon and a much higher horsepower. And so, what this is basically doing is,
+it's taking the data set and resummarizing it in different ways,
+and reorganizing it in different ways. Another thing that you might wanna do is
+average values within a particular factor. So, this is a very common thing to do. So, this is now looking at
+a insect sprays data set. So, what we have now is
+different kinds of sprays. So, in this case, the spray is A, or
+B, or C, or D, or E or F and then it's the count of the number of insects that
+you see with that different spray, and so one thing that you might want
+to do is take the sum of the count of insects that you see for
+each of the different sprays. So to do that what you could do is you
+could take the insect count variable and pass it to tapply. And you could say, I would like to tapply, that means apply along an index,
+a particular function. So I'm going to apply to count along
+the index spray, the function sum. What that's gonna do is, within each value
+of spray, it will sum up the counts, so you get the sum for A and
+the sum for B and the sum for C. That's one very brief,
+shorthand way of calculating those sums. Another way is what's called split,
+apply, combine. So, you can imagine that what you
+wanna do is, you wanna take the insect spray counts and you want to split them
+up by each of the different sprays. So you can do that with
+the split function and R and what you end up now is with a list,
+where you get the list of the values for A, the list of the values for B,
+the list of the values for C and so forth. So that's the split part of
+the split apply component. Then what you can do is you can
+apply to that list a function. So here we have the list
+of different values for each of the different sprays, and we can
+use lapply to apply across that list. So each element of your list,
+we're going to apply the sum. So again, we get the same values out,
+we've summed up the counts for A, summed up the counts for B,
+summed up the counts C and so forth. And now we actually have a list but
+we may wanna go back to a vector so that it's easier to manipulate on our. And so then, we do combining. We basically unlist the list that we got
+when we did the apply after the split. One thing that will combine
+a couple of those steps together, so after you've taken the data and
+you've split it up, you can actually just use the s apply
+command which will do both the apply and the combine components of this split,
+apply, combine. The plyr package provides a nice interface
+for doing this sort of action in one step. So, we take the Insect Sprays data set and
+we path it to the function ddply. And then what we do is we say, okay, these are the variables that we'd like to
+summarize, and you have to use dot and then parentheses, so that you don't have
+to use quote quotation marks around spray. Then you're going to say we want
+to summarize this variable. And how do we want to summarize it,
+we want to provide a sum. So basically we sum up the count
+of within that spray variable. And you get C here. The same sort of process has been applied,
+a split applied the buying process. This is kind of nice because you can
+also use it to calculate the values and apply them to each variable. So for example, suppose you wanna
+be able to subtract off the mean, or the total count from the actual
+count for every variable, what you could do is you
+could actually calculate A spraySums variable that's the same
+length as the original data set. So again I ask ddply,
+the InsectSprays data frame, and I say I wanna summarize
+the spray variable and I wanna summarize the counts and
+I wanna sum them up. But now I've passed it ave function, so when I say sum here,
+I'm actually calculating the sum as the ave function applied to count
+where the subfunction is sum. And so what ends up happening is spraySuns
+ends up being the same dimension as the original InsectSprays data set. So for every time I see an A in the spray,
+I get the sum for all of the A values. So in other words, instead of having
+a data set where you just see the sum for A once, you see the sum for A for every
+value of A in the data set and so that now this variable can be added to the data
+set and used to do different analysis. For more information on how to reshape
+data, you can see the plyr tutorial. There's also a really nice reshaped
+tutorial here on slideshare. And a good plyr primer
+is on our bloggers here. So other functions that you might wanna
+be aware of are acast, which just like we were using dcast a minute ago to take
+a melted data set and turn it into a data frame, acast turns it into
+an array possibly multiple dimensional. And then a range you can for reordering data sets without using
+the order commands like we saw in previous lectures, just like you can use
+mutate to add new variables. So you can use a combination of ddply and mutate in order to add new variables that
+are summaries of their previous variables.
