@@ -1,0 +1,88 @@
+This lecture is about
+reading data from HDF5. HDF5 is used for storing large data sets. It's also used for
+storing structured data sets, and it supports storing a range of datatypes. The name HDF stands for hierarchical data
+format and that's because the data is stored in groups which contains zero or
+more data sets, along with their metadata. Each of these groups has a group header,
+with the group name, and a list of attributes
+corresponding to that group. They also have a group symbol table which
+has a list of the objects in the group. Datasets are then multidimensional
+arrays of elements along with metadata. They can have a header with name,
+datatype, dataspace, storage layout. And then they also have a data array, which is actually sort of a data frame you
+can think about it of the HDF5 element. If you wanna know more about the HDF5 storage structure you can go
+to the HDF5 group's website. The R HDF5 package is actually
+installed through bioconductor. So the way that we're going to install
+the package is we're going to source this URL right here, and
+that will load the biocLite function. The first time you install a package with
+biocLite, you will also have to install the bio base packages from Bioconductor
+and so it might take a little bit. And so what we're gonna do is use
+the biocLite command to load the R HDF5 package. Then once we've downloaded the package, we can just load it with the same
+library command that we always use. In this lecture we're gonna
+actually create HDF5 files, and then interact with them. You can actually just use the R HDF5
+file package to access data. And pull it out of HDF5 data sets without
+having to create them yourself, but it's sort of easier in terms of lecturing
+just to show you what it looks like when we create them ourselves. So we're gonna use the h5createFile
+command to create HDF5 file set, which is gonna be, example.h5. So this lecture's gonna be
+modeled very closely on the RHDF5 tutorial which can
+be found at this website here, that I've linked to at
+the very bottom of this slide. So, once we've created that HDF5 file, then what we can do is we can
+create groups within the file. So we use h5createGroup. And so what that will do is it'll
+create within this file, the group foo. And then we can create
+another group called baa. And create another group That is
+a sub group of a group called foobaa. And so what you can do then,
+is you can actually see the groups and the names of the files that we've created. If you look at h5ls, so
+it's like the ls command but it's listing out only the components
+of this particular hef5 file. So then what we can do is
+write to the specific groups. So for example, we can create a matrix A,
+and then we can use the h5write command to write that matrix
+to a particular group. So again this is the file that
+we're looking at and then this is the group within that file, and so
+we don't have to write just matrices. We can actually write
+multidimensional arrays. For example,
+here's a multidimensional array. We can actually add attributes. So for example,
+we can give it metadata like this, the leader attribute,
+which is sort of about the units. And then we can again use
+the h5write command to write this array to a particular subgroup. And so again if we list out
+what's going on inside this file now we have all
+the groups that we've created. And also within those groups we
+actually have some datasets. So you can see that
+A is now an H5 dataset. And it consists of integers. And then there is another dataset down
+here, B, which consists of floats. And it give you the dimensions of those
+datasets that can be multidimensional. so we can write a data set directly. Also, we can write it actually a data set
+to the top level group and the way that we do that is suppose we create a dataframe
+like this, with the df command. So now we have this data frame up here. And so what we can do is we can actually
+use the h5write command to write that. Data frame directly to
+the top level group. So instead of passing it the group
+that we're gonna send it to we can actually just send
+it the variable name. So then if we list out what's going on
+we now see that in the top level group, sort of the root group,
+you see df and it's a dataset. And it gives you the dimensions
+of the dataset and so forth. You can then read your written
+data using the h5read command. So you're gonna use h5read,
+you're gonna tell it what file you're gonna be looking in, and then for
+example you can tell it to read a very specific data set like this
+where you can do slash A. You can read sub data sets by just
+specifying the pack like this. You can also read a data
+set in the top level group by just specifying the data set name. And so, what you get back out
+is the data that you wrote in. This is how you are going to read data if,
+for example, you have a data set in a H5 file,
+HDF5 file and you want to get it out. Another advantage of the HDF5 file
+format is that you can easily read and write in chunks, so what we're gonna do
+here actually is we're gonna write again. We're gonna use H5write and
+we're gonna be writing to the data set, A, that's inside of our file. And so what we're gonna be doing is we're
+gonna be writing the elements 12, 13, and 14 and we can tell it, While we wanna
+write into that data set and we wanna write it to a specific part of that data
+set, so what we can do is give it indices. So the index file here will give you
+indices for each of the dimensions. So the first dimension we're gonna
+say write to the first three rows, in the first column of this dataset,
+these values. And so if we read the dataset
+after we've done that writing, you can see that in the first three rows
+of the first column, you get 12, 13, and 14 just like we wrote there. You can use a similar index command to read just the sub-component
+of the dataset as well. So you can pass it an index which is a list that shows
+the different dimensions to read. For example if you just wanted to read
+the first three elements, the first three rows of the first column you could
+pass this same index command to H5 read. So some notes further resources. One thing to keep in mind is that HDF5
+can be used to optimize reading and writing from disc in R. This tutorial here gives a lot more
+information about how to use HDF5. I've borrowed a lot of information for
+this lecture from that tutorial. And the HDF5 group has a lot
+of good information in general in using HDF5 if that's
+what you're interested in.

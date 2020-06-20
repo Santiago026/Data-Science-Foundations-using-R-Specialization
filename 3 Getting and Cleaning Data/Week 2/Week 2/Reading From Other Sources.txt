@@ -1,0 +1,64 @@
+So far we've covered reading data
+from a large number of sources, whether it's from different
+file types like the XML or JSON files, or whether it's different
+sources like HDFI, or MySQL. While I've covered a few
+of the highlights, I think that there's a large number
+of other places where you might wanna be able to get data from, and I have by
+no means comprehensively covered all of the different R packages that can
+be used to access those data. Roger has a really nice advertising
+video on how there's an R package for everything, kind of modeled on the Apple,
+there's an app for everything, Here I'm gonna briefly review
+a few useful packages I know about, but you should by no means consider
+this a comprehensive list. In general, I found the best way to find
+out if an R package exists is to Google data storage mechanism,
+followed by R package. You just time R, sometimes I haven't
+been able to find it with the search. So for example, I might type,
+my SQL R package, and that usually comes up with the very first
+taking, the most interesting package. I found that almost every kind of data
+type that you might wanna have access to, as long as its relatively common, there's
+a R package for accessing the data. If you wanna interact directly with files,
+we've seen how to use URL in getting data lectures so far, but you
+can also use the File function to access a connection to a particular file that's
+already localized on your computer. You could also use gzfile and bzfile to access zipped files that
+might be laying on your computer. And then, if you do question mark
+connections, you can learn a lot more about opening connections to files,
+both locally and remotely. The foreign package is very useful if
+you work with people who use other programming languages or
+other statistical programming languages. So, it loads data from files for Minitab,
+S, SAS, SPSS and a bunch of others. So, the basic functions read like read and
+then .foo, where foo is the extension for the particular file from
+the particular programming language. So, for example it's dta for Stata, and
+it it's an Octave file it's .octave. And if it's SPSS it's .spss. And then you can read .xport
+files from SAS, for example. If you want to see a lot more
+about this you can go read about the Foreign package in the help file
+which is pretty self explanatory, and I've been able to read most files
+from other programming languages. There's also a large number of
+other database packages, so for example PostgreSQL, I've provided
+DB-compliant database connection from R. So, here's a tutorial,
+actually at this first link. And then the second link is the help file. There's also the RODBC,
+which provides interfaces for multiple databases including PostgreQL,
+MySQL, Microsoft Access, and SQLite. There's a tutorial here
+that's very nice as well, and then a help file that will give you,
+walk you through most of the functions. If you use MongoDb, there's actually
+a very nice package called RMongo, and there's also another package, RMongoDb,
+which can be used to interface with MongoDb and
+extract data from that database. Again, you're gonna be sending queries
+very similar to the way you were doing with the R MySQL package, you're gonna actually send queries to the
+database using the database's own syntax. So, if you're gonna use the R package,
+you have to learn just a little bit about the syntax for
+the database to be able to extract data. You can also read other things that aren't
+necessarily data in the traditional format in terms of text files and so forth. You can read directly images with jpeg,
+or readbitmap, png. These are all, png,
+these are all functions that allow you to access image files that load them
+into R directly and manipulate them. The EBI image package in bioconductor
+is also very nice for analyzing and manipulating image data. You can read GIS data, so this is
+geographic information systems data. You can read it with a variety of
+different packages that will allow you to access and play with different
+kinds of GIS data that are exported by proprietary and not proprietary software. Another cool thing that you
+can read is directly from mp3. So you can use either the tuneR or the seewave packages to actually
+read musical data, and do analysis. There's a lot of nice musical processing
+software in R that you can use to analyze those data, and come up with
+interesting cool new analysis, as well. So like I said, this is just a list of
+the packages that I thought of off the top of my head, but
+whatever your application is, you can just Google the R package that
+will allow you to access the data. There's always an R package for that.

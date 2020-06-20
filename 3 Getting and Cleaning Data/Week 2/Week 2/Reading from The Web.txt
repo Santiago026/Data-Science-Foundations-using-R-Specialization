@@ -1,0 +1,94 @@
+This lecture is about
+reading data from the web. There are a large number ways that
+you can read data from the web. This is primarily going to focus on
+scraping data out of websites and maybe doing a little bit with working with APIs
+and a little bit about authentication. Later we'll have a lecture that
+specifically focuses on just the API component of getting data out of the web. So webscraping is programatically
+extracting data from HTML code of websites or from URLs. It can be a great way to get data. For example, this link that I
+have here is an article about how somebody scraped all of the categories
+that Netflix assigns movies to and then analyzed them in
+a very interesting way. And that ended up being a story that went
+viral because it collected an interesting set of data just by programmatically
+extracting data from websites. I would say almost all websites have
+information that you might want to programmatically read in some
+way if you're interested in getting the data off that site. In some cases this is against
+the terms of service for the website. So some websites don't specifically
+say that they do not wanna be scraped. And so when you do that, if you try to scrape the data from them,
+you're at your own risk. If you attempt to read too
+many pages too quickly, a very common consequence is that you
+can have your IP address blocked. If you read a lot of proprietary
+information off of websites, you can get into even bigger trouble, so
+you should be a little bit careful when you're deciding to scrape
+data off of websites. But in general, it can be a very good way
+to collect a lot of data very quickly. So I'm gonna give you one example of how
+to programmatically extract some data and so that comes from my Google Scholar page. So this is that Google Scholar page and
+there's the link down there at the bottom. That's the web link. And so this is actually a page that
+tells you about the papers that I've published and something about
+how often they've been cited, which is the kind of data
+that academics care about. And so what we're gonna do is,
+first we're gonna use the read_lines command to get some data off the Internet,
+that's one way. And so what you can do is you can open
+a connection to a particular URL and you can do that using this URL function. So you just pass it the name of
+the URL that you would like to open a connection to. And then you can use the readLines
+function to read out some of the data from that connection. And then just like when you
+were working with the database, you're gonna wanna be sure to close
+the connection after you've used it. So if you look at the htmlCode
+that we've collected from this, it's gonna look like this. It's gonna look very,
+like one big long string of letters. You can send readLines a set number of
+lines that you'd like it to read but it'll still come out
+unformatted in this way. So it's a little bit hard to read. One way to deal with that is to, as we've
+seen before is to use the XML package. So again, we could use this same URL. Use the XML package, and
+parse the HTML again, using the InternalNodes to get
+the complete structure out. Then if I wanted to get say, get
+the title of the page, I could look for the node that's in the title tags. And get the title of the page. Or I could get sort of the number of
+times my papers were cited by looking at particular table
+elements of that table. Another approach to getting data
+is actually with the GET command. This is the httr package. For doing things like this
+where there's an open, easily accessible website,
+accessing it with connections like we talked about
+before might be the easiest way. But we'll talk in a minute about why the
+httr package can be very useful in other settings. So here I've loaded the httr package,
+and then what I do is I take that same URL I was using before, and
+I just GET the URL with html2. And then what I have to do now is actually
+have to extract the content from that HTML page. So I do that, and I say I'm gonna
+extract the content as a text. Just one big text string. And then I can use the htmlParse
+command to parse out that text, and get the parsed HTML. And so this parsed HTML is gonna
+look exactly like what I would have got if I had used the XML
+package to extract the data directly. And so then I can use xpathSApply
+to extract out the title of the page again like I did before. So that's how you can use get
+just to do the exact same sort of exercise that you would have
+done with the XML package. In some other cases, you might have to do
+something a little bit more complicated. So if you navigate to this
+webpage with your browser, you'll see that it requires a username and
+password input. And so if I just try to get that page
+using the GET command from the httr package, I get a response
+that says Status: 401 and that's because I wasn't able to login
+because I haven't been authenticated. So what you could do with the HTTR package
+is you can actually authenticate yourself for websites, and so you can do this by assigning to this
+what we're gonna call the handle. We can go and get that website and
+so we pass at the URL again, but then we use this authenticate command, and
+we give it the username and the password. In this case,
+this is just a test website, and so the username is user and
+the password is password. And so you can test out things like
+this to see if you can get access. In this case now, the response
+is Status: 200, which means we actually were able to get access to
+the file and to even authenticate it. And now we can look at
+the names of this pg2, which gives you all
+the different components. We included the cookies that we have for
+this file, and then the handle that we used
+to access it and all that. And so, we can then use the content
+function to extract the content from that website, after having logged in through r. So make sure that you use handles
+because if you use handles then you can actually access. You can sort of save the authentication
+across multiple accesses to a website. So if you set Google to be a handle where
+that Google is a particular website, then what you can do is you can tell
+GET to go and get that handle and you can say go get it for a specific
+path or you can set it a different path. So for example,
+if you authenticate this handle one time then the cookies will stay with that
+handle and you'll be authenticated. You won't have to keep authenticating over
+and over again as you access that website. So, r-bloggers has a lot of good examples
+on how to scrape data from the Web, and so if you search for
+Web scraping on r-bloggers, you'll be able to get
+all of those tutorials. The httr help file also has
+a bunch of useful examples, primarily with sort of toy examples. So if you couple that with some
+of the more applied examples on r-bloggers you can get quite a ways. And then see later lectures on APIs on
+how to programmatically interact with APIs of websites.
