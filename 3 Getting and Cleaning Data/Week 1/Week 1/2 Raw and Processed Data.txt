@@ -1,0 +1,104 @@
+This lecture is about raw and
+processed data. So I'm gonna be talking a little
+bit about how raw data may be different depending on
+who you're talking to. So some people might consider
+one version of the data raw, and some people might consider
+another version of the data raw. So first I was gonna talk
+about the definition of data. So as we saw in the data scientist
+toolbox, data are values of qualitative or quantitative variables,
+belonging to a set of items. So the set of items might
+be the population or the set of objects that you
+might be interested in. And the values of course
+quantitative variables and the variables are the things
+that your measuring. And you might measure them in qualitative
+terms or in quantitative terms. So usually when we think about variables
+we think about things like this. If you look down here at the bottom. We think about country of origin,
+sex, treatment, and quantitative variables like height,
+weight, blood pressure. A lot of these measurements
+are actually derived from much lower level measurements. So for example,
+if you think about blood pressure, blood pressure's actually measured by
+calculating a pressure measurement. And so there's actually a lot
+of low level things that go into calculating that
+pressure measurement. And so those low level things
+are the kinds of things that we're going to be talking
+about in raw versus processed data. So the raw data are the original
+source of data, they're often very hard to use for data
+analyses because they're complicated or they're hard to parse or
+they're very hard to analyze. Data analysis actually includes the
+processing or the cleaning of the data. If you go and obtain a dataset that's
+actually a raw image file and you process it, and turn it into a nice data frame
+that then you use to analyze an ARM. That data processing actually
+is part of the data analysis, your data science pipeline. In fact a huge component of a data
+scientist's job is performing those sorts of processing operations. The raw data may only need to be processed
+once, but regardless of how often you process it, you need to keep a record
+of all the different things you did. Because it can have a major impact
+on the data stream analysis. The processed data is data
+that is ready for analysis. So the processing of the data might
+include merging, subsetting, transforming, or you might go into a file and
+extract out a part of an image. You might go into a file and extract out a little bit of text
+from a preformed text field. Or you may do a number of other things. Depending on the field that you work in,
+there may be standards for processing. For example,
+in the area where I work, genomics, there are a lot of really standard
+preprocessing techniques that need to be applied before you can analyze data. A critical, critical component is
+that all steps should be recorded. I can't state this strongly enough. Preprocessing often ends up being the most
+important component of a data analysis in terms of affect on the downstream data. So paying attention to all the steps that
+you did is critically important if you're going to be a data scientist who's
+careful about understanding what's really happening in the entire
+data processing pipeline. So, I'm gonna give you one really quick
+example of a processing pipeline just to illustrate what I mean by there
+being different levels of raw data. So, this an Illumina HiSeq machine, so what this machine can be
+used to do is to sequence DNA. And so that sequencing is much, much
+faster now than it used to be in the past. When the original Human Genome Project
+got started, it took almost a decade and over a $1 billion to
+sequence one human genome. And that same process can now
+be performed in about a week for about $10,000 using a machine like this. So it's an example of how data
+are becoming more and more cheap and easier to collect. And so the way that this machine works
+in a very, very rough overview is, you end up with, you can imagine how
+you could start with fragments of DNA. So it starts with little fragments
+of DNA which are bound to a slide. So each fragment might
+be 500 letters long, so you can think of your DNA as
+a string of 3 billion letters. And so you take a small chunk of that,
+500 letters, and bind it to this slide. And then there's a chemical
+process by which multiple copies of that same sequence are made. And so what ends up happening is this process is performed
+through sequencing by synthesis. And so what happens is the complementary
+base or the complementary letter to each letter in the sequence that's attached
+to the slide is attached one at a time. And each different letter A, C,
+T, and G get a different color. So what happens is, for
+each little cluster, you get a color at every single
+new nucleotide that's synthesized. And so
+those colors create a series of images. And so, for example, when you're synthesizing the first
+nucleotide you might get this image. Then this image at the second one and
+this image at the third one and so forth. If you zoom in on one specific little dot,
+that corresponds to the sequence of exactly one of these little clusters
+of sequences that are exactly the same. And so what you can do is you can
+follow along from image to image, you can see what the color is in
+that image, and in that image, and in that image, and in that image. And what you end up with is, for each
+image, the color corresponding to each letter, whichever one is the brightest is
+the one that you assign to that sequence. So for example, in the very first
+letter for this particular fragment is going to be a C, because you can see
+that of these four letters right here, the C is actually the highest. And then in the second nucleotide,
+you can actually see that the highest letter out of these four,
+or the most bright letter, is the G. And so the next letter that we'd
+assign would be a G and so forth. So, the final thing that you end up
+with is something like this FASTQ file that I've shown
+a few times in the class. So the FASTQ file is a text file where,
+for each of these little fragments
+that you've got on the plate, you actually see a specific set
+of letters, As, Cs, Ts and Gs. So you can think about the raw data
+being in several different steps. So the raw data might be these image files
+down here, so you have to process those image files in order to get these profiles
+here for each different fragment. And then after you have the profiles
+you have to process those in order to make predictions about which
+letters should go into the sequences that actually end up right here. So any of these stages
+could be considered raw and in each of these stages there are a number
+of computational steps that could have major impact that must be applied. And so one thing to keep in mind when
+you're doing data analysis is, frequently, you might end up analyzing these so called
+reads, that come off of this machine. Or you might even analyze
+something that's downstream, say some counts based on
+adding up some of those reads. When you do that, you're glossing over the fact that all of
+these processing steps happen beforehand. And so those processing steps
+can have a major impact. And part of this course is sort of
+understanding what those processing steps are so you can make sure that
+your analysis isn't being driven by artifacts caused by the way that you
+went from the raw data to the tidy data. So that's what getting data is all about,
+is taking raw data and turning it into processed data.
