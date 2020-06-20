@@ -1,1 +1,6 @@
-Welcome to Week 2 of R Programming. This week, we take the gloves off, and the lectures cover key topics like control structures and functions. We also introduce the first programming assignment for the course, which is due at the end of the week....
+Practical R Exercises in swirl Part 2
+During this week of the course you should complete the following lessons in the R Programming swirl course:
+
+1. Logic
+2. Functions
+3. Dates and Times
