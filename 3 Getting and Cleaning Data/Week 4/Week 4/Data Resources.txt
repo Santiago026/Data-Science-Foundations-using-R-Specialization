@@ -1,0 +1,52 @@
+This lecture is just to point
+you to some data resources so you might be able to get some free data,
+and do some of analysis, if you don't happen to have any at
+the organization that you're at. So this website consists of data from
+a variety of national organizations. So we can start off with
+the United Nations data sets, which are at this website, and then you can find data that are available
+from the United States at data.gov. And you can go to this blog post to
+find a bunch of other cities and states within the United States
+that have open data. There's also a lot more information
+on a variety of other countries and this website down here
+data.gov/opendatasites actually gives information on data sites for
+other countries all around the world. So that's a good place to start if you don't know if your country has
+an open government data site. Gapminder is another
+website that has a lot of data about development in
+particular in human heath. And so there's a large number
+of datasets that are available on that website which is Gapminder.org. You can also get survey data
+from the United States. This website here gives you a lot of
+information about how do you actually access the surveys and process them in R. So it's actually really nice because the
+surveys are often very big and unwieldy, and this website gives you a lot of
+information on how to access them. The Infochimps Marketplace
+has a bunch of different data sets which you can sort
+by various different tags, and you can identify data sets that
+might be of interest to you. Some of them are free, and
+some of them cost money. Kaggle is another place that
+you can go to for data sets. So Kaggle is a company that offers data
+science competitions, and they often have very interesting data sets that they make
+available as part of those competitions. So they're good for practice, but they're
+also good for potentially discovering new, interesting things that can help
+companies solve real problems. There's also some collections that
+have been put together by famous data scientists. So these are several data scientists. Hilary Mason, Jeff Hammerbacher,
+and others who have put together data sets that are research
+quality and that might be useful for you. These all come from this blog post which
+talks about several other data sets, they're curated by other
+data scientists as well. There are also a large variety of other,
+more specialised collections. So for example, the Stanford
+Large Network Data Archive has a large number of data sets that focus
+on network data, machine learning, the UCI Machine Learning archive has
+a variety of data sets that can be used to practice your classification or
+predictions. The CMU Statlib is one of the most
+famous canonical sets of data sets that are available. Gene Expression Omnibus is focused on
+data sets that come from human genomic experiments or
+other organismal genomics experiments. And then there's data from the ArXiv or
+public datasets on Amazon web services. Finally, there a large number of APIs
+that you've now learned how to use, through the course of this class. And so, for example, there's specific
+packages such as the twitter package which can be used to access the Twitter API, in an easier way than trying to
+set up a application yourself. You can similarly get
+access to figshare data or to data from publications like Plos one. rOpenSci has a large number of very
+nice packages that allow you to access data from a variety of sources
+that are focused on academics. There's also dedicated R packages for
+Facebook and Google Maps. All of these mean that there is really no
+excuse to not be able to find real data to focus on any project that
+you might be interested in.
