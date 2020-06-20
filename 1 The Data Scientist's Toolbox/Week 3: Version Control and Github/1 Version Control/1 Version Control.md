@@ -13,7 +13,7 @@ As we’ve seen in the example, without version control, you might be keeping mu
 
 Which brings us to the next major benefit of version control: It keeps a record of all changes made to the files. This can be of great help when you are collaborating with many people on the same files - the version control software keeps track of who, when, and why those specific changes were made. It’s like “Track changes” to the extreme!
 
-An example of the version control history for the development of this course!
+![image 1]()
 An example of the version control history for the development of this course!
 
 This record is also helpful when developing code, if you realize after some time that you made a mistake and introduced an error. You can find the last time you edited that particular bit of code, see the changes you made, and revert back to that original, unbroken code, leaving everything else you’ve done in the meanwhile untouched!
@@ -23,7 +23,7 @@ Finally, when working with a group of people on the same set of files, version c
 ## What is Git? Why should you use it?
 Git is a free and open source version control system. It was developed in 2005 and has since become the most commonly used version control system around! StackOverflow, which should sound familiar from our Getting Help lesson, surveyed over 60,000 respondents on which version control system they use, and as you can tell from the chart below, [Git is by far the winner](https://insights.stackoverflow.com/survey/2017#work-version-control).
 
-Results of a StackOverflow survey asking which version control software their respondents use
+![image 2]()
 Results of a StackOverflow survey asking which version control software their respondents use
 
 And as you become more familiar with Git and how it works and interfaces with your projects, you’ll begin to see why is has risen to the height of popularity. One of the main benefits of Git is that it keeps a local copy of your work and revisions, which you can then edit offline, and then once you return to internet service, you can sync your copy of the work, with all of your new edits and tracked changes to the main repository online. Additionally, since all collaborators on a project have their own local copy of the code, everybody can simultaneously work on their own parts of the code, without disturbing that common repository.
@@ -46,7 +46,7 @@ When we talk about version control systems, commits are at the heart of them. If
 
 **Pull**: Updating your local version of the repository to the current version, since others may have edited in the meanwhile. Because the shared repository is hosted online and any of your collaborators (or even yourself on a different computer!) could have made changes to the files and then pushed them to the shared repository, you are behind the times! The files you have locally on your computer may be outdated, so you pull to check if you are up to date with the main repository.
 
-Analogies to these concepts
+![image 3]()
 Analogies to these concepts
 
 **Staging**: The act of preparing a file for a commit. For example, if since your last commit you have edited three files for completely different reasons, you don’t want to commit all of the changes in one go; your message on why you are making the commit and what has changed will be complicated since three files have been changed for different reasons. So instead, you can stage just one of the files and prepare it for committing. Once you’ve committed that file, you can stage the second file and commit it. And so on. Staging allows you to separate out file changes into separate commits. Very helpful!
@@ -59,7 +59,7 @@ To summarize these commonly used terms so far and to test whether you’ve got t
 
 **Conflict**: When multiple people make changes to the same file and Git is unable to merge the edits. You are presented with the option to manually try and merge the edits or to keep one edit over the other.
 
-**A visual representation of these concepts, from https://www.atlassian.com/git/tutorials/using-branches/git-merge**
+![image 4]()
 **A visual representation of these concepts, from https://www.atlassian.com/git/tutorials/using-branches/git-merge**
 
 **Clone**: Making a copy of an existing Git repository. If you have just been brought on to a project that has been tracked with version control, you would clone the repository to get access to and create a local version of all of the repository’s files and all of the tracked changes.
@@ -77,7 +77,7 @@ You don’t want to get in the same habit that [XKCD](https://xkcd.com/1296/) ha
 
 Finally, be cognizant of the version of files you are working on. Frequently check that you are up to date with the current repo by frequently pulling. Additionally, don’t horde your edited files - once you have committed your files (and written that helpful message!), you should push those changes to the common repository. If you are done editing a section of code and are planning on moving on to an unrelated problem, you need to share that edit with your collaborators!
 
-A summary of the main best practices to keep in mind as you work with version control
+![image 5]()
 A summary of the main best practices to keep in mind as you work with version control
 
 ## Summary
