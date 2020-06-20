@@ -1,0 +1,3 @@
+For regular discussions of the latest data science topics, you can go to the [Not So Standard Deviations](https://soundcloud.com/nssd-podcast) podcast that is co-hosted by myself and [Dr. Hilary Parker](https://www.linkedin.com/in/parkerhilary), a Data Scientist at Stitch Fix. The goal of the podcast is to talk about important data science topics and to have a little fun doing it. We also commonly discuss differences between academia and industry as well as the craft of doing data analysis.
+
+If you're an avid podcast listener, you can [subscribe to the podcast through iTunes](https://itunes.apple.com/us/podcast/not-so-standard-deviations/id1040614570) or any popular podcasting app.
