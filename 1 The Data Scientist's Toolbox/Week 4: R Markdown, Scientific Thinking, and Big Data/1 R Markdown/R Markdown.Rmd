@@ -1,0 +1,96 @@
+---
+title: "R Markdown"
+author: "Chris Norgaard"
+date: "4/28/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+# R Markdown
+
+## What is R Markdown
+
+R Markdown is a way of creating fully reproducible documents, in which both text and code can be combined. In fact, these lessons are written using R Markdown! That’s how we make things:
+
+* bullets
+* **bold**bold**bold**
+* *italics*italics*italics*
+* [link]https://rmarkdown.rstudio.com/authoring_basics.html
+* or run inline r code
+
+Despite these documents all starting as plain text, you can render them into HTML pages, or PDFs, or Word documents, or slides! The symbols you use to signal, for example, bold or italics is compatible with all of those formats.
+
+### Why use R Markdown?
+
+You can easily combine text and code chunks in one document, you can easily integrate introductions, hypotheses, your code that you are running, the results of that code and your conclusions all in one document.
+
+Sometimes you will be working on a project that takes many weeks to complete; you want to be able to see what you did a long time ago (and perhaps be reminded exactly why you were doing this) and you can see exactly what you ran AND the results of that code - and R Markdown documents allow you to do that.
+
+Another major benefit to R Markdown is that since it is plain text, it works very well with version control systems. It is easy to track what character changes occur between commits; unlike other formats that aren’t plain text. For example, in one version of this lesson, I may have forgotten to bold this word. When I catch my mistake, I can make the plain text changes to signal I would like that word bolded, and in the commit, you can see the exact character changes that occurred to now make the word bold.
+
+Check out [this video]https://vimeo.com/178485416 that the RStudio developers have released about R Markdown and what it is!
+
+### Installation 
+
+Like the rest of R, R Markdown is free and open source. You can install the R Markdown package from CRAN with:
+
+install.packages("rmarkdown")
+
+### The default template for R Markdown files
+
+There are three main sections of an R Markdown document. The first is the header at the top, bounded by the three dashes. This is where you can specify details like the title, your name, the date, and what kind of document you want output. If you filled in the blanks in the window earlier, these should be filled out for you.
+
+Also on this page, you can see text sections, for example, one section starts with “## R Markdown” - We’ll talk more about what this means in a second, but this section will render as text when you produce the PDF of this file - and all of the formatting you will learn generally applies to this section.
+
+And finally, you will see code chunks. These are bounded by the triple backticks. These are pieces of R code (“chunks”) that you can run right from within your document - and the output of this code will be included in the PDF when you create it.
+
+## “Knitting” documents
+
+When you are done with a document, in R Markdown, you are said to “knit” your plain text and code into your final document. To do so, click on the “Knit” button along the top of the source panel. When you do so, it will prompt you to save the document as an RMD file. 
+
+### The rendered PDF you created by knitting your markdown file
+
+So here you can see that the content of the header was rendered into a title, followed by your name and the date. The text chunks produced a section header called “R Markdown” which is followed by two paragraphs of text. Following this, you can see the R code summary(cars), importantly, followed by the output of running that code. And further down you will see code that ran to produce a plot, and then that plot. This is one of the huge benefits of R Markdown - rendering the results to code inline.
+
+## What are some easy Markdown commands?
+
+**bold**
+*italics*
+
+# Header level 1
+## Header level 2
+### Header level 
+
+### To make an R code chunk
+
+```{r}
+This text is displayed verbatim / preformatted
+```
+
+## Link
+
+[rmarkdown.rstudio]https://rmarkdown.rstudio.com/
+[R Markdown cheatsheet]https://rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf
