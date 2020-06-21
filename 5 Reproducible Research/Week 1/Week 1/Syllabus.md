@@ -10,3 +10,7 @@
 # Course Book
 
 The book [Report Writing for Data Science in R](https://leanpub.com/reportwriting?utm_source=coursera&utm_medium=syllabus&utm_campaign=CourseraSyllabus) serves as the official course reference textbook. It comes in electronic form (PDF, ePub, and mobi) and is available from Leanpub. The book contains the lecture material for the course and can serve as a reference for you once the course is completed.
+
+Links
+- https://www.google.com/about/datacenters/
+- https://www.ted.com/talks/dan_meyer_math_class_needs_a_makeover
