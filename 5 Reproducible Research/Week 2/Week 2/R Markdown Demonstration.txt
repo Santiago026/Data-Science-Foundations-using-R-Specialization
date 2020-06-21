@@ -1,0 +1,85 @@
+So this is just going to be a quick demo
+on how to create and edit a R marked down document so you can see I got RStudio
+launched here and nothing's open. So I'm just going to start up create
+a new document in our mark down so I can go to the menu here and there's a couple of options of
+different types of files you can open. So I'm going to create
+an R markdown file and you can see that actually it starts right
+at RStudio actually populates the document with a little bit of kind of filler
+material just to get you started. So in case you're not
+familiar with mark down, you can see a little bit of how it's done. So let me just show you
+the whole thing here and I think the easiest thing to do right now
+just let we can just knit this document we can run the document through Knitter. It's going to run the our code. It's going to produce the markdown file. It's going to convert
+the markdown found HTML and then launch it in RStudio's
+little web browser. So why don't we just click
+on the knit HTML button? And see what happens. So I first have to save this file. So I'll just call it markdown demo. And I'll use the file extension rmd,
+which is traditional. But not necessary. You can see it's running,
+processing the file and it produces this nice HTML output. So you can see it matches the title. It has the text is just plain text. The R code is in put in the gray boxes and the output from the R
+code is right below it. There's more R code here
+which is the plot and you see the plot just appears right here. So it's nice in that this document here, which only has R code in it can be
+evaluated and the output can be embedded inside the output document without you
+having to create a plot separately and then kind of include it and
+then you get a nice document like this. So but this obviously is not
+the document that we wanted to write. So the first thing you're going
+to have to do typically is just erase everything here. So the first thing you want to do is
+probably start to put some sort of title in so you can call it something
+like my first R markdown file. And if you put this kind
+of equal sign under here, that'll make it look like a title and then
+also and then you can add some text here. This is my first R markdown file. Here is we're going to load some data. And then here I'm going
+to add some R code. I want to load some data to either
+plot it or maybe fit a model. So the first thing you want to do
+is is three back ticks here and with the curly braces you can wrap the
+the letter r in curly braces lowercase R. Now you can see how the highlighting
+changed a little bit in the editor. So now I'm going to be
+writing R code right? So maybe the first thing I want to do is
+I'll load the air quality data set from R which is a very basic data
+set that has data on ozone. So I'm going to load it
+from the datasets library. Sorry the datasets package. It's called air quality. And I'll just call summary on it. Just to see what it's about. Okay, so now I can close the R code
+chunk with three back ticks again. You can see that the format
+the highlighting changes now to just plain text. Okay. So the first code chunk it basically
+loads the datasets package loads the air quality data set which is a data frame and
+then gives me a little summary and then maybe the next thing I want
+to do is do a summary plot. So I'm going to open another R chunk and
+I'm going to take my air quality data set. I'm going to call pairs on it and
+make a pairs plot. Who knows what that will look like? Probably you want to have a little
+descriptive text here just so I'm not flying blind here. So, let's see. So now I'm going to make
+a pairs plot of the data. So I'm going to save this file. I can also hit Apple S on Mac and
+I'm going to hit I'm going to knit it so you can see it processes,
+the process of the file and here you can see the R code that I wrote. Here's the summary which is just for
+each column in the data frame. It just gives me a little kind of
+five number summary plus the mean and tells me how many NAs there are in each
+if there are any so you can see that for example, the median ozone is 31.5 and
+the median wind is 9.7, and the median solar radiation is 205. So that's just a little
+bit of summary data. I can make you look at the pairs plot at
+the data right here when I saw I called the pair's function on the whole
+data frame and you see that all the pairwise bivariate relationships
+between all the variables in the data set. So you see it's not a very large data set. There are only six variables in it and I
+can see how they're related to each other. So lastly I might want to fill
+a little regression model so here's a regression model. Of ozone on wind solar radiation and
+temperature. So I'll start a code chunk again three back ticks and the R in curly braces. I'm going to fit a regression model here. So I need the stats package. Typically the stats package will be
+loaded already when you start up R but just to be safe I'll load it explicitly. And I want to fit a model here so
+I'm going to call the LM function. I'll say ozone is related to wind solar radiation and temperature and the dataset is the air quality data. And then I'm going to summarize this fit
+because I want to look at regression coefficients and standard errors and
+P values and things like that. So I'll close that code chunk. I'll save my file. So let me just double check that I save
+it yes I did and then I'll admit it. And now you can see after
+the pairs plot if I scroll down. I've got my regression model fitting code
+so you can always reproduce the code if you want by just kind of cutting and
+pasting that code in there and you can see the output from
+the regression model is right here. So it seems that all three of
+those variables wind, solar, radiation and temperature all
+appear to be associated with ozone. So this is a quick demo of how
+you can start an R markdown file. Basically you have to know how to write
+text which is fairly straightforward and you have to know how to write R code which
+hopefully you do after this course and then once you know how to do that you
+can mix and match these things together. There are a couple other important
+formatting elements that you can check out on the website that I
+pointed to in the slides. For example here, you can write
+an unordered list so like this and you don't have to do much thinking
+about it you just start adding things. And then you get yourself
+an unordered list. So if I save this and then knit it up. See everything else
+before looks the same but I got my little unordered list
+down here which is using bullets. So there are a couple other
+formatting elements like that. You can add raw HTML and if you're
+familiar with latec using the Knitter package, you can also have latec in it so
+you can add mathematical annotation. So that's a quick demo of R markdown. So check out RStudio and
+you can start editing your first R markdown file in the editor and
+see how it looks.
