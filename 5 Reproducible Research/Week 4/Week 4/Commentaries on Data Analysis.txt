@@ -1,0 +1,37 @@
+Hi, everyone.
+I just wanted to point out two commentaries that Jeff Leak and
+I recently published on the proceedings of a National Academy of Sciences
+in the journal, Science. So first one is basically
+about the idea of treating poor data analysis as a problem
+that should be prevented. So it's kinda taking like
+a disease type of analogy here and how do we prevent
+the disease from occurring. So this is very related to the evidence
+based data analysis lectures that you've already seen in this course. And we've taken the time to write up a
+summary of kinda what we believe should be done and how best we can address the
+problem of preventing poor analysis from happening and
+from being published in the literature. The second commentary which was
+published in Science recently is about framing the question in a data analysis,
+and how if you inappropriately identify the question, then it will lead
+to kind of problems with reproducibility. Because there are many different kinds
+of data analyses that you can do. And not all of them you would expect
+the results to be reproduced, for example if you had a highly
+exploratory analysis where you were just looking for different
+interesting predictors that you might wanna follow up within
+a more careful study. Well, the highly exploratory or
+even descriptive type of analysis is one type of analysis that we might
+use to kind of generate hypotheses or to generate ideas, but we don't expect it
+to be the be all and the end all analysis. On the other hand, you might have
+a more confirmative type of analysis where you have a very carefully
+designed either trial, or a study. Where your trying to confirm
+that two things are associated. Maybe a drug improved people
+with a certain disease, improves the health of people
+with a certain disease. Or maybe it eliminates
+certain types of problems. So when you have more confirmatory type
+of analysis that you're trying to do, then things have to be done
+much more carefully, and there often have to be pre-specified
+protocols and things like that. So, in many ways one can kind of sort the evidence produced by various
+publications by first identifying, what is the question that's being asked
+and what type of analysis is being done? Cuz then we can set our expectations about
+what we expect to see in the analysis. And what we would expect to kind of
+be reproduced further down the line. So I encourage you to take a look at these
+commentaries and to see what you think.
