@@ -29,7 +29,13 @@ Type the following from the R console to start swirl:
 
 ``` swirl() ```
 
-Then, follow the menus and select the Getting and Cleaning Data course when given the option.
+Then, follow the menus and select the Getting and Cleaning Data course when given the option.For the first part of this course you should complete the following lessons:
+
+1. Principles of Analytic Graphs
+2. Exploratory Graphs
+3. Graphics Devices in R
+4. Plotting Systems
+5. Base Plotting System
 
 ## If you need help...
 
