@@ -34,7 +34,7 @@ barplot(totalNEI[, Emissions]
 dev.off()
 ```
 
-<img src="https://github.com/mGalarnyk/datasciencecoursera/blob/master/4_Exploratory_Data_Analysis/project2/plot1.png" alt="Exploratory Data Analysis Project 2 question 1" >
+<img src="https://github.com/WelfareCheck/Data-Science-Foundations-using-R-Specialization/blob/master/4%20Exploratory%20Data%20Analysis/Week%204/Course%20Project%202/plot1.png?raw=true" >
 
 Question 2 ([plot2.R](https://github.com/WelfareCheck/Data-Science-Foundations-using-R-Specialization/blob/master/4%20Exploratory%20Data%20Analysis/Week%204/Course%20Project%202/plot2.png?raw=true))
 ----------
@@ -55,7 +55,7 @@ barplot(totalNEI[, Emissions]
 
 dev.off()
 ```
-<img src="https://github.com/mGalarnyk/datasciencecoursera/blob/master/4_Exploratory_Data_Analysis/project2/plot2.png" alt="Exploratory Data Analysis Project 2 question 2" >
+<img src="https://github.com/WelfareCheck/Data-Science-Foundations-using-R-Specialization/blob/master/4%20Exploratory%20Data%20Analysis/Week%204/Course%20Project%202/plot2.png?raw=true" >
 
 Question 3 ([plot3.R](https://github.com/WelfareCheck/Data-Science-Foundations-using-R-Specialization/blob/master/4%20Exploratory%20Data%20Analysis/Week%204/Course%20Project%202/plot3.png?raw=true))
 ----------
@@ -77,7 +77,7 @@ ggplot(baltimoreNEI,aes(factor(year),Emissions,fill=type)) +
 dev.off()
 ```
 
-<img src="https://github.com/mGalarnyk/datasciencecoursera/blob/master/4_Exploratory_Data_Analysis/project2/plot3.png" alt="Exploratory Data Analysis Project 2 question 3" >
+<img src="https://github.com/WelfareCheck/Data-Science-Foundations-using-R-Specialization/blob/master/4%20Exploratory%20Data%20Analysis/Week%204/Course%20Project%202/plot3.png?raw=true" >
 
 Question 4 ([plot4.R](https://github.com/WelfareCheck/Data-Science-Foundations-using-R-Specialization/blob/master/4%20Exploratory%20Data%20Analysis/Week%204/Course%20Project%202/plot4.png?raw=true))
 ----------
@@ -100,7 +100,7 @@ ggplot(combustionNEI,aes(x = factor(year),y = Emissions/10^5)) +
 dev.off()
 ```
 
-<img src="https://github.com/mGalarnyk/datasciencecoursera/blob/master/4_Exploratory_Data_Analysis/project2/plot4.png" alt="Exploratory Data Analysis Project 2 question 4" >
+<img src="https://github.com/WelfareCheck/Data-Science-Foundations-using-R-Specialization/blob/master/4%20Exploratory%20Data%20Analysis/Week%204/Course%20Project%202/plot4.png?raw=true" >
 
 Question 5 ([plot5.R](https://github.com/WelfareCheck/Data-Science-Foundations-using-R-Specialization/blob/master/4%20Exploratory%20Data%20Analysis/Week%204/Course%20Project%202/plot5.png?raw=true))
 ----------
@@ -125,7 +125,7 @@ ggplot(baltimoreVehiclesNEI,aes(factor(year),Emissions)) +
 dev.off()
 ```
 
-<img src="https://github.com/mGalarnyk/datasciencecoursera/blob/master/4_Exploratory_Data_Analysis/project2/plot5.png" alt="Exploratory Data Analysis Project 2 question 5" >
+<img src="https://github.com/WelfareCheck/Data-Science-Foundations-using-R-Specialization/blob/master/4%20Exploratory%20Data%20Analysis/Week%204/Course%20Project%202/plot5.png?raw=true" >
 
 Question 6 ([plot6.R](https://github.com/WelfareCheck/Data-Science-Foundations-using-R-Specialization/blob/master/4%20Exploratory%20Data%20Analysis/Week%204/Course%20Project%202/plot6.png?raw=true))
 ----------
@@ -158,4 +158,4 @@ ggplot(bothNEI, aes(x=factor(year), y=Emissions, fill=city)) +
 dev.off()
 ```
 
-<img src="https://github.com/mGalarnyk/datasciencecoursera/blob/master/4_Exploratory_Data_Analysis/project2/plot6.png" alt="Exploratory Data Analysis Project 2 question 6" >
+<img src="https://github.com/WelfareCheck/Data-Science-Foundations-using-R-Specialization/blob/master/4%20Exploratory%20Data%20Analysis/Week%204/Course%20Project%202/plot6.png?raw=true" >
